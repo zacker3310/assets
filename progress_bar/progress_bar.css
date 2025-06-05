@@ -1,0 +1,41 @@
+/* Full Page Background */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Bounding Box (2.025in x 0.675in) */
+.bounding-box {
+  width: 2.025in;
+  height: 0.675in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Progress Bar (1.6875in x 0.2025in) */
+.progress-bar {
+  width: 1.6875in;
+  height: 0.2025in;
+  display: flex;
+  border-radius: 0.0675in;
+  overflow: hidden;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Left Section – Dark Green */
+.progress-left {
+  flex: 75;
+  background-color: #005f40;
+}
+
+/* Right Section – Light Green */
+.progress-right {
+  flex: 25;
+  background-color: #00cc66;
+}

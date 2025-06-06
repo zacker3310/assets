@@ -1,0 +1,35 @@
+/* Transparent background */
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Chart layout area */
+.chart-wrapper {
+  width: 2.5in;
+  height: 1in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* Pie chart with drop shadow */
+.pie {
+  width: 0.9in;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: conic-gradient(
+    #4ade80 0% 40%,      /* Q1: Green – 40% */
+    #60a5fa 40% 60%,     /* Q2: Blue – 20% */
+    #f472b6 60% 85%,     /* Q3: Pink – 25% */
+    #facc15 85% 100%     /* Q4: Yellow – 15% */
+  );
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}

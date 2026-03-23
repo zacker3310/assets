@@ -20,7 +20,7 @@ A compact library of standalone HTML/CSS assets for reports, embeds, and lightwe
 
 ## Quick Start
 
-1. Open [index.html](/Users/zacker/Application%20Development/assets/assets/index.html) in a browser to preview the library.
+1. Open `index.html` in a browser to preview the library.
 2. Open any component HTML file directly for an isolated preview.
 3. Copy a component directory into your project and adjust its CSS custom properties, copy, or dimensions as needed.
 

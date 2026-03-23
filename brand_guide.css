@@ -250,7 +250,7 @@
 }
 
 .table-row:nth-child(even) span {
-  background: rgba(125, 31, 42, 0.03);
+  background: rgba(var(--theme-accent-rgb), 0.04);
 }
 
 .table-row span:first-child {

@@ -160,7 +160,7 @@
 .panel-metric {
   grid-column: span 5;
   background:
-    linear-gradient(180deg, rgba(125, 31, 42, 0.14), rgba(125, 31, 42, 0.03)),
+    var(--theme-accent-wash),
     linear-gradient(180deg, var(--theme-surface-strong) 0%, var(--theme-surface) 100%);
 }
 

@@ -1,10 +1,10 @@
 :root {
-  --review-panel-accent: linear-gradient(180deg, rgba(125, 31, 42, 0.14), rgba(125, 31, 42, 0.03));
+  --review-panel-accent: var(--theme-accent-wash);
   --review-measure: linear-gradient(90deg, var(--theme-neutral-strong) 0%, var(--theme-accent) 100%);
 }
 
 html[data-theme="dark"] {
-  --review-panel-accent: linear-gradient(180deg, rgba(255, 102, 119, 0.14), rgba(255, 102, 119, 0.03));
+  --review-panel-accent: var(--theme-accent-wash);
 }
 
 body {

@@ -1,15 +1,15 @@
 :root {
   --sheet-range-low: var(--theme-surface-muted);
-  --sheet-range-mid: #d7cec3;
-  --sheet-range-high: #beb2a6;
-  --sheet-hero-accent: linear-gradient(180deg, rgba(125, 31, 42, 0.14), rgba(125, 31, 42, 0.03));
+  --sheet-range-mid: #bfd0df;
+  --sheet-range-high: #a5b8cb;
+  --sheet-hero-accent: var(--theme-accent-wash);
   --sheet-measure: linear-gradient(90deg, var(--theme-neutral-strong) 0%, var(--theme-accent) 100%);
 }
 
 html[data-theme="dark"] {
-  --sheet-range-mid: #2b2426;
-  --sheet-range-high: #3a3033;
-  --sheet-hero-accent: linear-gradient(180deg, rgba(255, 102, 119, 0.15), rgba(255, 102, 119, 0.03));
+  --sheet-range-mid: #314255;
+  --sheet-range-high: #44576a;
+  --sheet-hero-accent: var(--theme-accent-wash);
 }
 
 body {

@@ -135,7 +135,7 @@
 .composition-card:hover,
 .composition-card:focus-visible {
   transform: translateY(-3px);
-  border-color: rgba(125, 31, 42, 0.28);
+  border-color: var(--theme-accent-line);
   box-shadow: var(--theme-shadow-md);
   outline: none;
 }
@@ -200,7 +200,7 @@
   padding: 1rem;
   border-radius: var(--theme-radius-md);
   background:
-    linear-gradient(180deg, rgba(125, 31, 42, 0.12), rgba(125, 31, 42, 0.03)),
+    var(--theme-accent-wash),
     var(--theme-surface-muted);
 }
 
@@ -208,11 +208,7 @@
   display: block;
   min-height: 0.72rem;
   border-radius: var(--theme-radius-pill);
-  background: rgba(0, 0, 0, 0.08);
-}
-
-html[data-theme="dark"] .composition-preview span {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--theme-ink-soft-fill);
 }
 
 .composition-preview-dashboard {

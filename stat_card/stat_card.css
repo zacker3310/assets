@@ -1,22 +1,24 @@
 :root {
   --card-width: 3.1in;
   --card-height: 1.9in;
-  --card-radius: 0.22in;
-  --card-shadow: 0 16px 34px rgba(20, 35, 31, 0.18);
-  --ink: #f9fbf7;
-  --muted: rgba(249, 251, 247, 0.72);
-  --accent: #f4b266;
-  --positive: #b9f3c7;
-  --card-bg: linear-gradient(145deg, #103c33 0%, #1f5a4f 55%, #184a73 100%);
+  --card-radius: 0.16in;
+  --card-shadow: 0 24px 52px rgba(0, 0, 0, 0.14);
+  --ink: #f3f3f1;
+  --muted: rgba(243, 243, 241, 0.62);
+  --accent: #ff5a6c;
+  --positive: #ffffff;
+  --card-bg: linear-gradient(180deg, #1a1a1a 0%, #0c0c0c 100%);
+  --rule: rgba(255, 255, 255, 0.12);
 }
 
 html[data-theme="dark"] {
-  --card-shadow: 0 20px 38px rgba(0, 0, 0, 0.34);
-  --ink: #f4fbf7;
-  --muted: rgba(244, 251, 247, 0.72);
-  --accent: #ffc488;
-  --positive: #9be5b2;
-  --card-bg: linear-gradient(145deg, #0d2e27 0%, #15463b 52%, #133552 100%);
+  --card-shadow: 0 26px 56px rgba(0, 0, 0, 0.34);
+  --ink: #f3f3f1;
+  --muted: rgba(243, 243, 241, 0.62);
+  --accent: #ff6979;
+  --positive: #ffffff;
+  --card-bg: linear-gradient(180deg, #191919 0%, #080808 100%);
+  --rule: rgba(255, 255, 255, 0.12);
 }
 
 * {
@@ -30,7 +32,7 @@ body {
   display: grid;
   place-items: center;
   background: var(--theme-page-bg);
-  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .stat-card {
@@ -45,8 +47,8 @@ body {
 
 .eyebrow {
   margin: 0 0 0.1in;
-  font-size: 0.13in;
-  letter-spacing: 0.08em;
+  font-size: 0.11in;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent);
 }
@@ -61,24 +63,25 @@ body {
 h1 {
   margin: 0;
   font-size: 0.58in;
-  line-height: 0.92;
-  letter-spacing: -0.04em;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  font-weight: 600;
 }
 
 .delta {
   margin-top: 0.04in;
-  padding: 0.05in 0.1in;
+  padding: 0.04in 0.09in;
   border-radius: 999px;
-  font-size: 0.14in;
-  font-weight: 700;
-  color: #123e30;
+  font-size: 0.12in;
+  font-weight: 600;
+  color: #111111;
   background: var(--positive);
 }
 
 .context {
   margin: 0.18in 0 0.24in;
   max-width: 2.35in;
-  font-size: 0.16in;
+  font-size: 0.15in;
   line-height: 1.5;
   color: var(--muted);
 }
@@ -88,7 +91,7 @@ h1 {
   justify-content: space-between;
   gap: 0.12in;
   padding-top: 0.14in;
-  border-top: 1px solid rgba(249, 251, 247, 0.14);
-  font-size: 0.14in;
+  border-top: 1px solid var(--rule);
+  font-size: 0.13in;
   color: var(--ink);
 }

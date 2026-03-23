@@ -1,0 +1,133 @@
+:root {
+  --card-width: 3.25in;
+  --card-height: 1.75in;
+  --surface: rgba(255, 255, 255, 0.9);
+  --border: rgba(20, 20, 20, 0.08);
+  --ink: #121212;
+  --muted: #6a6a6a;
+  --accent: #bb1e2d;
+  --range-low: #efefec;
+  --range-mid: #d6d6d2;
+  --range-high: #bcbcb7;
+  --measure: linear-gradient(90deg, #111111 0%, #be1f2f 100%);
+  --target: #ffffff;
+  --shadow: 0 20px 46px rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="dark"] {
+  --surface: rgba(11, 11, 11, 0.88);
+  --border: rgba(255, 255, 255, 0.08);
+  --ink: #f3f3f1;
+  --muted: #959595;
+  --accent: #ff5869;
+  --range-low: #1a1a1a;
+  --range-mid: #282828;
+  --range-high: #363636;
+  --measure: linear-gradient(90deg, #f3f3f1 0%, #ff5b6c 100%);
+  --target: #f3f3f1;
+  --shadow: 0 24px 52px rgba(0, 0, 0, 0.34);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0.7in 0.24in 0.24in;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--theme-page-bg);
+  font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.bullet-card {
+  width: var(--card-width);
+  min-height: var(--card-height);
+  padding: 0.22in;
+  border-radius: 0.16in;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.18in;
+}
+
+.eyebrow {
+  margin: 0 0 0.08in;
+  font-size: 0.11in;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0;
+  font-size: 0.28in;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+}
+
+.headline {
+  font-size: 0.3in;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.bullet-scale {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.28fr 0.36fr 0.36fr;
+  height: 0.26in;
+  margin-top: 0.22in;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.range { display: block; height: 100%; }
+.range-low { background: var(--range-low); }
+.range-mid { background: var(--range-mid); }
+.range-high { background: var(--range-high); }
+
+.measure {
+  position: absolute;
+  top: 0.04in;
+  left: 0.14in;
+  width: 76%;
+  height: 0.18in;
+  border-radius: 999px;
+  background: var(--measure);
+}
+
+.target {
+  position: absolute;
+  top: -0.02in;
+  left: 82%;
+  width: 0.03in;
+  height: 0.32in;
+  border-radius: 999px;
+  background: var(--target);
+}
+
+.scale-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.08in;
+  font-size: 0.11in;
+  color: var(--muted);
+}
+
+.footnote {
+  margin: 0.16in 0 0;
+  font-size: 0.14in;
+  line-height: 1.55;
+  color: var(--muted);
+}

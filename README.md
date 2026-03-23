@@ -16,6 +16,9 @@ A lightweight library of standalone HTML/CSS components for reports, embeds, and
 | Progress Bar | `progress_bar/` | Compact status card with progress messaging |
 | Stat Card | `stat_card/` | KPI card for summary pages and executive snapshots |
 | Sparkline Card | `sparkline_card/` | Mini trend card with a simple bar sparkline |
+| Bullet Chart | `bullet_chart/` | Actual-versus-target bar with qualitative ranges |
+| Timeline Steps | `timeline_steps/` | Horizontal phase tracker for projects and launches |
+| Leaderboard Card | `leaderboard_card/` | Ranked list card for people, teams, or campaigns |
 
 ## Shared Theme System
 
@@ -37,11 +40,14 @@ assets/
 ├── index.html
 ├── theme.css
 ├── theme.js
+├── bullet_chart/
 ├── bar_chart/
+├── leaderboard_card/
 ├── pie_chart/
 ├── progress_bar/
 ├── sparkline_card/
-└── stat_card/
+├── stat_card/
+└── timeline_steps/
 ```
 
 ## Conventions

@@ -1,28 +1,35 @@
 :root {
   --card-width: 3.1in;
   --card-height: 1.35in;
-  --text-strong: #17352a;
-  --text-muted: #687970;
-  --track-bg: #d9efe4;
-  --track-fill-start: #0d6b48;
-  --track-fill-end: #16a16b;
-  --track-rest: #8de6b6;
-  --card-bg: #ffffff;
-  --card-shadow: 0 16px 32px rgba(23, 53, 42, 0.12);
+  --text-strong: #111111;
+  --text-muted: #6d6d6d;
+  --track-bg: #dfdfdb;
+  --track-fill-start: #141414;
+  --track-fill-end: #ba1f2e;
+  --track-rest: #cfcfca;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(20, 20, 20, 0.08);
+  --card-shadow: 0 22px 46px rgba(0, 0, 0, 0.08);
+  --accent: #bb1e2d;
 }
 
 html[data-theme="dark"] {
-  --text-strong: #eef8f3;
-  --text-muted: #9cb6ac;
-  --track-bg: #1b332b;
-  --track-fill-start: #1ea36f;
-  --track-fill-end: #2cd28d;
-  --track-rest: #295743;
-  --card-bg: rgba(12, 24, 21, 0.84);
-  --card-shadow: 0 18px 36px rgba(0, 0, 0, 0.3);
+  --text-strong: #f3f3f1;
+  --text-muted: #959595;
+  --track-bg: #1c1c1c;
+  --track-fill-start: #f2f2ef;
+  --track-fill-end: #ff5c6d;
+  --track-rest: #303030;
+  --card-bg: rgba(11, 11, 11, 0.88);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 24px 50px rgba(0, 0, 0, 0.34);
+  --accent: #ff5163;
 }
 
-/* Full page background */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0.7in 0.24in 0.24in;
@@ -30,21 +37,20 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* Bounding box */
 .bounding-box {
   width: var(--card-width);
   min-height: var(--card-height);
 }
 
-/* Progress card */
 .progress-card {
   width: 100%;
   min-height: 100%;
   padding: 0.22in;
-  border-radius: 0.22in;
+  border-radius: 0.16in;
+  border: 1px solid var(--card-border);
   background: var(--card-bg);
   box-shadow: var(--card-shadow);
 }
@@ -56,10 +62,10 @@ body {
 
 .eyebrow {
   margin: 0;
-  font-size: 0.12in;
-  letter-spacing: 0.08em;
+  font-size: 0.11in;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #1d8a62;
+  color: var(--accent);
 }
 
 .progress-heading {
@@ -71,50 +77,46 @@ body {
 
 .progress-heading strong {
   font-size: 0.24in;
+  font-weight: 600;
+  letter-spacing: -0.03em;
   color: var(--text-strong);
 }
 
 .progress-heading span,
 .progress-footnote {
-  font-size: 0.13in;
+  font-size: 0.12in;
   color: var(--text-muted);
 }
 
-/* Progress bar */
 .progress-bar {
   position: relative;
   width: 100%;
-  height: 0.18in;
+  height: 0.14in;
   margin-top: 0.16in;
   display: flex;
-  border-radius: 0.0675in;
+  border-radius: 999px;
   overflow: hidden;
   background: var(--track-bg);
 }
 
-/* Filled section */
 .progress-left {
   flex: 75;
   background: linear-gradient(90deg, var(--track-fill-start) 0%, var(--track-fill-end) 100%);
 }
 
-/* Remaining section */
 .progress-right {
   flex: 25;
-  background-color: var(--track-rest);
+  background: var(--track-rest);
 }
 
-/* Gloss overlay */
 .progress-gloss {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0));
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%);
   pointer-events: none;
 }
 
 .progress-footnote {
   margin: 0.14in 0 0;
+  line-height: 1.45;
 }

@@ -38,6 +38,21 @@ This repository is a small static asset library made of standalone HTML and CSS 
 - Files: `sparkline_card.html`, `sparkline_card.css`
 - Purpose: mini trend card with spark bars
 
+### `bullet_chart/`
+
+- Files: `bullet_chart.html`, `bullet_chart.css`
+- Purpose: actual-versus-target bullet chart
+
+### `timeline_steps/`
+
+- Files: `timeline_steps.html`, `timeline_steps.css`
+- Purpose: horizontal milestone timeline
+
+### `leaderboard_card/`
+
+- Files: `leaderboard_card.html`, `leaderboard_card.css`
+- Purpose: ranked performance card
+
 ## Assistant Guidance
 
 - Keep the project dependency-free unless the user explicitly wants to change that.

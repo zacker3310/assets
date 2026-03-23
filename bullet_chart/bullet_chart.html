@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bullet Chart</title>
+  <link rel="stylesheet" href="../theme.css?v=20260322" />
+  <link rel="stylesheet" href="bullet_chart.css" />
+</head>
+<body>
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+    <span class="theme-toggle-label">Theme</span>
+    <span class="theme-toggle-state">Light</span>
+    <span class="theme-toggle-switch" aria-hidden="true"></span>
+  </button>
+  <article class="bullet-card">
+    <div class="card-head">
+      <div>
+        <p class="eyebrow">Performance vs Target</p>
+        <h1>Pipeline Coverage</h1>
+      </div>
+      <span class="headline">92%</span>
+    </div>
+    <div class="bullet-scale" aria-hidden="true">
+      <span class="range range-low"></span>
+      <span class="range range-mid"></span>
+      <span class="range range-high"></span>
+      <span class="measure"></span>
+      <span class="target"></span>
+    </div>
+    <div class="scale-labels">
+      <span>0%</span>
+      <span>Target 100%</span>
+      <span>120%</span>
+    </div>
+    <p class="footnote">Coverage is slightly under target but ahead of last quarter’s pace.</p>
+  </article>
+  <script src="../theme.js?v=20260322"></script>
+</body>
+</html>

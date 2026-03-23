@@ -1,23 +1,25 @@
 :root {
   --card-width: 3in;
   --card-height: 1.7in;
-  --bg: #fffdf9;
-  --ink: #1f2a24;
-  --muted: #66756e;
-  --border: #ebe2d4;
-  --accent: #db7c39;
-  --accent-soft: rgba(219, 124, 57, 0.16);
-  --bar: linear-gradient(180deg, #e59b63 0%, #cb6231 100%);
+  --bg: rgba(255, 255, 255, 0.9);
+  --ink: #121212;
+  --muted: #6e6e6e;
+  --border: rgba(20, 20, 20, 0.08);
+  --accent: #bb1e2d;
+  --accent-soft: rgba(187, 30, 45, 0.1);
+  --bar: linear-gradient(180deg, #2f2f2f 0%, #be1f2f 100%);
+  --shadow: 0 20px 46px rgba(0, 0, 0, 0.08);
 }
 
 html[data-theme="dark"] {
-  --bg: rgba(18, 27, 24, 0.88);
-  --ink: #edf6f0;
-  --muted: #a6b9b0;
-  --border: rgba(228, 211, 189, 0.16);
-  --accent: #f1a872;
-  --accent-soft: rgba(241, 168, 114, 0.14);
-  --bar: linear-gradient(180deg, #f1b17e 0%, #da7641 100%);
+  --bg: rgba(11, 11, 11, 0.88);
+  --ink: #f3f3f1;
+  --muted: #939393;
+  --border: rgba(255, 255, 255, 0.08);
+  --accent: #ff5667;
+  --accent-soft: rgba(255, 86, 103, 0.12);
+  --bar: linear-gradient(180deg, #f1f1ef 0%, #ff5a6c 100%);
+  --shadow: 0 24px 52px rgba(0, 0, 0, 0.34);
 }
 
 * {
@@ -31,18 +33,18 @@ body {
   display: grid;
   place-items: center;
   background: var(--theme-page-bg);
-  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .spark-card {
   width: var(--card-width);
   min-height: var(--card-height);
   padding: 0.22in;
-  border-radius: 0.22in;
+  border-radius: 0.16in;
   background: var(--bg);
   color: var(--ink);
   border: 1px solid var(--border);
-  box-shadow: 0 14px 30px rgba(31, 42, 36, 0.08);
+  box-shadow: var(--shadow);
 }
 
 .copy-row {
@@ -54,8 +56,8 @@ body {
 
 .eyebrow {
   margin: 0 0 0.08in;
-  font-size: 0.13in;
-  letter-spacing: 0.08em;
+  font-size: 0.11in;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent);
 }
@@ -63,17 +65,18 @@ body {
 h1 {
   margin: 0;
   font-size: 0.54in;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+  font-weight: 600;
 }
 
 .trend {
-  padding: 0.05in 0.1in;
+  padding: 0.04in 0.09in;
   border-radius: 999px;
   background: var(--accent-soft);
-  color: #9d4f1e;
-  font-size: 0.14in;
-  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.12in;
+  font-weight: 600;
 }
 
 .sparkline {
@@ -95,7 +98,7 @@ h1 {
 
 .caption {
   margin: 0.16in 0 0;
-  font-size: 0.15in;
-  line-height: 1.5;
+  font-size: 0.14in;
+  line-height: 1.55;
   color: var(--muted);
 }

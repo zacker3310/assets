@@ -1,0 +1,115 @@
+:root {
+  --card-width: 3.3in;
+  --card-height: 2.15in;
+  --surface: rgba(255, 255, 255, 0.9);
+  --border: rgba(20, 20, 20, 0.08);
+  --ink: #111111;
+  --muted: #6b6b6b;
+  --accent: #bc1f2e;
+  --rank-bg: #efefeb;
+  --score-bg: rgba(194, 32, 48, 0.08);
+  --score-ink: #bc1f2e;
+  --shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="dark"] {
+  --surface: rgba(11, 11, 11, 0.88);
+  --border: rgba(255, 255, 255, 0.08);
+  --ink: #f3f3f1;
+  --muted: #929292;
+  --accent: #ff596a;
+  --rank-bg: #202020;
+  --score-bg: rgba(255, 89, 106, 0.12);
+  --score-ink: #ff6575;
+  --shadow: 0 24px 52px rgba(0, 0, 0, 0.34);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0.7in 0.24in 0.24in;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--theme-page-bg);
+  font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.leaderboard-card {
+  width: var(--card-width);
+  min-height: var(--card-height);
+  padding: 0.22in;
+  border-radius: 0.16in;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.18in;
+}
+
+.eyebrow {
+  margin: 0 0 0.08in;
+  font-size: 0.11in;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0;
+  font-size: 0.28in;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+}
+
+.period {
+  font-size: 0.12in;
+  color: var(--muted);
+}
+
+.rows {
+  display: grid;
+  gap: 0.1in;
+  margin-top: 0.2in;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 0.28in 1fr auto;
+  align-items: center;
+  gap: 0.1in;
+}
+
+.rank {
+  display: grid;
+  place-items: center;
+  width: 0.24in;
+  height: 0.24in;
+  border-radius: 50%;
+  background: var(--rank-bg);
+  font-size: 0.11in;
+  font-weight: 600;
+}
+
+.name {
+  font-size: 0.14in;
+}
+
+.score {
+  padding: 0.04in 0.09in;
+  border-radius: 999px;
+  background: var(--score-bg);
+  color: var(--score-ink);
+  font-size: 0.11in;
+  font-weight: 600;
+}

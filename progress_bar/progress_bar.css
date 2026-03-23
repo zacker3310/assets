@@ -49,10 +49,10 @@ body {
   width: 100%;
   min-height: 100%;
   padding: 0.22in;
-  border-radius: 0.16in;
+  border-radius: 0.12in;
   border: 1px solid var(--card-border);
   background: var(--card-bg);
-  box-shadow: var(--card-shadow);
+  box-shadow: none;
 }
 
 .progress-copy {
@@ -76,23 +76,25 @@ body {
 }
 
 .progress-heading strong {
-  font-size: 0.24in;
+  font-size: 0.28in;
   font-weight: 600;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.05em;
   color: var(--text-strong);
 }
 
 .progress-heading span,
 .progress-footnote {
-  font-size: 0.12in;
+  font-size: 0.11in;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--text-muted);
 }
 
 .progress-bar {
   position: relative;
   width: 100%;
-  height: 0.14in;
-  margin-top: 0.16in;
+  height: 0.1in;
+  margin-top: 0.22in;
   display: flex;
   border-radius: 999px;
   overflow: hidden;
@@ -114,9 +116,4 @@ body {
   inset: 0;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%);
   pointer-events: none;
-}
-
-.progress-footnote {
-  margin: 0.14in 0 0;
-  line-height: 1.45;
 }

@@ -44,11 +44,11 @@ body {
   width: var(--card-width);
   min-height: var(--card-height);
   padding: 0.22in;
-  border-radius: 0.16in;
+  border-radius: 0.12in;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--ink);
-  box-shadow: var(--shadow);
+  box-shadow: none;
 }
 
 .header-row {
@@ -75,12 +75,13 @@ h1 {
 }
 
 .status-pill {
-  padding: 0.04in 0.09in;
-  border-radius: 999px;
-  background: rgba(194, 32, 48, 0.08);
+  padding: 0.02in 0;
   color: var(--accent);
-  font-size: 0.12in;
+  font-size: 0.11in;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   font-weight: 600;
+  background: transparent;
 }
 
 .timeline {
@@ -107,7 +108,7 @@ h1 {
   display: grid;
   gap: 0.05in;
   padding-top: 0.22in;
-  color: var(--muted);
+  color: var(--text-muted, var(--muted));
 }
 
 .dot {
@@ -123,13 +124,16 @@ h1 {
 }
 
 .step strong {
-  font-size: 0.15in;
+  font-size: 0.16in;
   color: var(--ink);
   font-weight: 600;
+  letter-spacing: -0.04em;
 }
 
 .meta {
   font-size: 0.11in;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .is-complete .dot { background: var(--complete); }

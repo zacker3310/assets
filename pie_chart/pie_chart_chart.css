@@ -49,15 +49,15 @@ body {
 .chart-card {
   width: 100%;
   min-height: 100%;
-  padding: 0.22in;
+  padding: 0.24in;
   display: grid;
   grid-template-columns: var(--pie-size) 1fr;
-  gap: 0.22in;
+  gap: 0.26in;
   align-items: center;
-  border-radius: 0.16in;
+  border-radius: 0.12in;
   border: 1px solid var(--panel-border);
   background: var(--panel-bg);
-  box-shadow: var(--panel-shadow);
+  box-shadow: none;
 }
 
 .pie-shell {
@@ -111,7 +111,7 @@ body {
 
 .legend {
   display: grid;
-  gap: 0.08in;
+  gap: 0.1in;
 }
 
 .eyebrow {
@@ -127,7 +127,9 @@ body {
   grid-template-columns: 0.14in 1fr auto;
   align-items: center;
   gap: 0.1in;
-  font-size: 0.13in;
+  font-size: 0.11in;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--text-muted);
 }
 

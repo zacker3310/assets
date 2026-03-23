@@ -9,6 +9,12 @@ This file gives Codex-specific context for working in this repo.
 - The repo is a static HTML/CSS component library with a shared theme layer.
 - Every page should remain directly viewable without a build step.
 - `theme.css` and `theme.js` are shared dependencies for the gallery and all component pages.
+- `brand_guide.html` is the browsable system guide for stakeholders.
+- `BRAND_GUIDE.md` and `TOKENS.md` are part of the system documentation layer.
+- `compositions.html` and `executive_dashboard.html` are portfolio-grade reference outputs.
+- `CONTRIBUTING.md`, `GOVERNANCE.md`, and `USAGE.md` define process and business context.
+- `VERSIONING.md` documents how cache-busting tokens should be updated.
+- `QA.md` documents the manual regression pass for deploys.
 
 ## When Editing
 
@@ -22,6 +28,12 @@ This file gives Codex-specific context for working in this repo.
 - `README.md`
 - `CLAUDE.md`
 - `AGENTS.md`
+- `BRAND_GUIDE.md`
+- `CONTRIBUTING.md`
+- `GOVERNANCE.md`
+- `TOKENS.md`
+- `USAGE.md`
+- `VERSIONING.md` when the versioning process changes
 - `index.html` when components are added or removed
 
 ## Preferred Patterns

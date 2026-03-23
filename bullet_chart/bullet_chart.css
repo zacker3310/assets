@@ -1,11 +1,11 @@
 :root {
   --card-width: 3.25in;
   --card-height: 1.75in;
-  --surface: rgba(255, 255, 255, 0.9);
-  --border: rgba(20, 20, 20, 0.08);
-  --ink: #121212;
-  --muted: #6a6a6a;
-  --accent: #bb1e2d;
+  --surface: var(--theme-surface);
+  --border: var(--theme-border);
+  --ink: var(--theme-text);
+  --muted: var(--theme-text-muted);
+  --accent: var(--theme-accent);
   --range-low: #efefec;
   --range-mid: #d6d6d2;
   --range-high: #bcbcb7;
@@ -15,11 +15,11 @@
 }
 
 html[data-theme="dark"] {
-  --surface: rgba(11, 11, 11, 0.88);
-  --border: rgba(255, 255, 255, 0.08);
-  --ink: #f3f3f1;
-  --muted: #959595;
-  --accent: #ff5869;
+  --surface: var(--theme-surface);
+  --border: var(--theme-border);
+  --ink: var(--theme-text);
+  --muted: var(--theme-text-muted);
+  --accent: var(--theme-accent);
   --range-low: #1a1a1a;
   --range-mid: #282828;
   --range-high: #363636;

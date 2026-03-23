@@ -3,9 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asset Gallery</title>
-  <link rel="stylesheet" href="theme.css?v=20260322b" />
-  <link rel="stylesheet" href="index.css?v=20260322d" />
+  <title>assets | Enterprise Brand Component Guide</title>
+  <meta
+    name="description"
+    content="A portfolio-grade static component system for enterprise reporting, investor communication, and lightweight product surfaces."
+  />
+  <script>
+    (function () {
+      var key = "assets-theme";
+      var theme = null;
+
+      try {
+        theme = localStorage.getItem(key);
+      } catch (error) {}
+
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      }
+
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="theme.css?v=20260323a" />
+  <link rel="stylesheet" href="index.css?v=20260323a" />
 </head>
 <body>
   <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
@@ -15,12 +37,78 @@
   </button>
   <main class="page-shell">
     <section class="hero">
-      <p class="eyebrow">lightweight library of components</p>
-      <h1>assets</h1>
+      <p class="eyebrow">Enterprise Brand Component Guide</p>
+      <h1>Static components, governed like a real system.</h1>
       <p class="hero-copy">
-        Built as self-contained HTML and CSS objects for reports, previews, and lightweight product surfaces.
+        A portfolio-grade design system built for executive reporting, investor communication, and lightweight product surfaces.
       </p>
       <div class="hero-rule"></div>
+      <div class="hero-links">
+        <a href="brand_guide.html">Open brand guide</a>
+        <a href="compositions.html">View compositions</a>
+        <a href="CASE_STUDY.md">Read case study</a>
+        <a href="README.md">Read repository guide</a>
+      </div>
+    </section>
+
+    <section class="proof-band">
+      <article class="proof-card">
+        <span class="asset-kicker">Scope</span>
+        <strong>8 core assets</strong>
+        <span>Standalone components designed for reuse across reporting and dashboard contexts.</span>
+      </article>
+      <article class="proof-card">
+        <span class="asset-kicker">System</span>
+        <strong>Shared tokens, theme, and governance</strong>
+        <span>Brand, deployment, QA, contribution, and usage standards are documented alongside the code.</span>
+      </article>
+      <article class="proof-card">
+        <span class="asset-kicker">Output</span>
+        <strong>3 portfolio-grade compositions</strong>
+        <span>Executive, investor, and operating layouts demonstrate the system working in realistic scenarios.</span>
+      </article>
+    </section>
+
+    <section class="deliverables-band" aria-label="Repository deliverables">
+      <div class="deliverables-copy">
+        <p class="eyebrow">Repository Depth</p>
+        <h2>Built like a working internal program, not a one-off visual dump.</h2>
+      </div>
+      <div class="deliverables-grid">
+        <article>
+          <span class="asset-kicker">Guide</span>
+          <strong>Brand, token, and usage standards</strong>
+          <span>Stakeholder-facing documentation explains what is approved, what is discouraged, and how the system should scale.</span>
+        </article>
+        <article>
+          <span class="asset-kicker">Governance</span>
+          <strong>Contribution, QA, and release discipline</strong>
+          <span>Operational docs define how assets get updated, validated, versioned, and published through a static deployment model.</span>
+        </article>
+        <article>
+          <span class="asset-kicker">Portfolio</span>
+          <strong>Compositions that prove the system works</strong>
+          <span>Executive, investor, and operating surfaces show how the components assemble into believable enterprise outputs.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="feature-band">
+      <a class="feature-card" href="executive_dashboard.html">
+        <span class="asset-kicker">Flagship composition</span>
+        <strong>Executive dashboard</strong>
+        <span>Multi-panel reporting surface for leadership reviews and portfolio presentation.</span>
+      </a>
+      <a class="feature-card" href="investor_update.html">
+        <span class="asset-kicker">Reference sheet</span>
+        <strong>Investor update</strong>
+        <span>Structured quarterly summary designed for investor, board, or leadership communication.</span>
+      </a>
+      <a class="feature-card" href="operating_review.html">
+        <span class="asset-kicker">Internal review</span>
+        <strong>Operating review</strong>
+        <span>Dense operational layout for delivery status, activity, and performance ranking.</span>
+      </a>
     </section>
 
     <section class="gallery">
@@ -73,7 +161,48 @@
         <span>Ranked performance list in a single quiet card.</span>
       </a>
     </section>
+
+    <section class="system-band">
+      <div class="system-copy">
+        <p class="eyebrow">Why This Matters</p>
+        <h2>A component library is easy. A believable branded system is harder.</h2>
+        <p>
+          This repository now includes the layers large organizations actually need: token discipline, accessibility,
+          deploy/versioning rules, stakeholder-facing documentation, and approved compositions that prove the parts work together.
+        </p>
+      </div>
+      <div class="system-list">
+        <div>
+          <strong>Brand Guide</strong>
+          <span>Principles, recommended patterns, and governance expectations.</span>
+        </div>
+        <div>
+          <strong>Token Model</strong>
+          <span>Shared surfaces, text, borders, accents, and theme behavior.</span>
+        </div>
+        <div>
+          <strong>Operational Docs</strong>
+          <span>Versioning, QA, contribution, usage, and governance guidance.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-band">
+      <div class="portfolio-callout">
+        <p class="eyebrow">Portfolio Positioning</p>
+        <h2>Useful as a code sample, stronger as a systems story.</h2>
+        <p>
+          This work now demonstrates component craft, token design, static deployment discipline, accessibility, and the operating layer that makes branded UI believable inside a large organization.
+        </p>
+      </div>
+      <div class="portfolio-links">
+        <a href="CASE_STUDY.md">Case study narrative</a>
+        <a href="TOKENS.md">Token reference</a>
+        <a href="GOVERNANCE.md">Governance model</a>
+        <a href="QA.md">Release checklist</a>
+      </div>
+    </section>
   </main>
-  <script src="theme.js?v=20260322b"></script>
+  <script src="theme.js?v=20260323a"></script>
 </body>
 </html>

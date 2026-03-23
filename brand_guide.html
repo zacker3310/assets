@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brand Guide | assets</title>
+  <meta
+    name="description"
+    content="System-level guidance for the assets repository: brand principles, token behavior, accessibility, and governance."
+  />
+  <script>
+    (function () {
+      var key = "assets-theme";
+      var theme = null;
+
+      try {
+        theme = localStorage.getItem(key);
+      } catch (error) {}
+
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      }
+
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="theme.css?v=20260323a" />
+  <link rel="stylesheet" href="brand_guide.css?v=20260323a" />
+</head>
+<body>
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+    <span class="theme-toggle-label">Theme</span>
+    <span class="theme-toggle-state">Light</span>
+    <span class="theme-toggle-switch" aria-hidden="true"></span>
+  </button>
+  <main class="guide-shell">
+    <section class="guide-hero">
+      <p class="eyebrow">Brand System</p>
+      <h1>Component guidance for a disciplined enterprise brand.</h1>
+      <p class="hero-copy">
+        This guide defines how to use the repository as a visual system: restrained color, direct hierarchy,
+        accessible interactions, and predictable deployment behavior.
+      </p>
+      <div class="hero-links">
+        <a href="index.html">Home</a>
+        <a href="README.md">Repository guide</a>
+        <a href="TOKENS.md">Token guide</a>
+        <a href="USAGE.md">Usage guidance</a>
+        <a href="GOVERNANCE.md">Governance</a>
+        <a href="compositions.html">Compositions</a>
+      </div>
+    </section>
+
+    <section class="guide-grid">
+      <article class="guide-card">
+        <p class="card-label">01 Principles</p>
+        <h2>Reduce until the signal is unmistakable.</h2>
+        <ul>
+          <li>Use a small number of surfaces, rules, and emphasis states.</li>
+          <li>Prefer typography and spacing over decoration.</li>
+          <li>Use red only as a deliberate signal, not ambient color.</li>
+        </ul>
+      </article>
+
+      <article class="guide-card">
+        <p class="card-label">02 Tokens</p>
+        <h2>One visual language across all components.</h2>
+        <ul>
+          <li>Shared surface, border, text, and accent tokens live in `theme.css`.</li>
+          <li>Component CSS should extend shared tokens, not re-invent the palette.</li>
+          <li>Cache-busted shared assets must remain version-aligned across every page.</li>
+        </ul>
+      </article>
+
+      <article class="guide-card">
+        <p class="card-label">03 Accessibility</p>
+        <h2>Data must stay understandable without visual guesswork.</h2>
+        <ul>
+          <li>Standalone assets include hidden summary text for screen readers.</li>
+          <li>Focus states must remain visible on navigation and theme controls.</li>
+          <li>Reduced motion preferences should disable non-essential transitions.</li>
+        </ul>
+      </article>
+
+      <article class="guide-card">
+        <p class="card-label">04 Governance</p>
+        <h2>Operational discipline is part of the brand.</h2>
+        <ul>
+          <li>Update `VERSIONING.md` rules together with any deploy-affecting asset changes.</li>
+          <li>Run the checklist in `QA.md` before trusting a Pages deployment.</li>
+          <li>Keep docs, gallery, and component inventory in sync.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="spec-band">
+      <div class="spec-block">
+        <p class="spec-label">Color Behavior</p>
+        <strong>Monochrome base</strong>
+        <span>Black, off-white, graphite, and disciplined red accents.</span>
+      </div>
+      <div class="spec-block">
+        <p class="spec-label">Typography</p>
+        <strong>System-first</strong>
+        <span>High-contrast size shifts, tight tracking, and clean uppercase metadata.</span>
+      </div>
+      <div class="spec-block">
+        <p class="spec-label">Surfaces</p>
+        <strong>Reduced geometry</strong>
+        <span>Thin borders, shallow radii, minimal shadow, precise spacing.</span>
+      </div>
+      <div class="spec-block">
+        <p class="spec-label">Delivery</p>
+        <strong>Static reliability</strong>
+        <span>Direct-open HTML files, GitHub Pages compatibility, explicit cache-busting.</span>
+      </div>
+    </section>
+
+    <section class="guidance-table">
+      <div class="table-head">
+        <span>Area</span>
+        <span>Recommended</span>
+        <span>Avoid</span>
+      </div>
+      <div class="table-row">
+        <span>Color</span>
+        <span>One accent family with neutral surfaces</span>
+        <span>Multiple bright highlight colors in one component</span>
+      </div>
+      <div class="table-row">
+        <span>Copy</span>
+        <span>Short nouns, direct descriptions, measurable labels</span>
+        <span>Marketing phrases or ambiguous placeholders</span>
+      </div>
+      <div class="table-row">
+        <span>Structure</span>
+        <span>Landmarks, summaries, predictable hierarchy</span>
+        <span>Decorative wrappers with no semantic role</span>
+      </div>
+      <div class="table-row">
+        <span>Change Control</span>
+        <span>Shared token updates plus QA and version alignment</span>
+        <span>One-off visual tweaks without deployment validation</span>
+      </div>
+    </section>
+
+    <section class="guide-grid secondary-grid">
+      <article class="guide-card">
+        <p class="card-label">05 Usage</p>
+        <h2>Pair components according to business narrative.</h2>
+        <ul>
+          <li>Use `stat_card` with `sparkline_card` for KPI plus movement.</li>
+          <li>Use `bar_chart` with `bullet_chart` for mix plus target attainment.</li>
+          <li>Use `progress_bar` with `timeline_steps` for status plus phase context.</li>
+        </ul>
+      </article>
+      <article class="guide-card">
+        <p class="card-label">06 Contribution</p>
+        <h2>System changes require documentation, not only code.</h2>
+        <ul>
+          <li>Update gallery, docs, and guide pages together.</li>
+          <li>Preserve direct-open previews and accessible summaries.</li>
+          <li>Use the manual QA checklist before trusting a release.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <script src="theme.js?v=20260323a"></script>
+</body>
+</html>

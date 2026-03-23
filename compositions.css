@@ -1,0 +1,221 @@
+:root {
+  --shell-width: 10.8in;
+  --surface: var(--theme-surface);
+  --border: var(--theme-border);
+  --text: var(--theme-text);
+  --muted: var(--theme-text-muted);
+  --accent: var(--theme-accent);
+  --soft-accent: var(--theme-accent-soft);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 0 1rem 1rem;
+  background: var(--theme-page-bg);
+  color: var(--text);
+  font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.composition-shell {
+  width: min(var(--shell-width), calc(100vw - 2rem));
+  margin: 0 auto;
+  padding: 1.45in 0 1in;
+}
+
+.hero {
+  max-width: 6.4in;
+  margin-bottom: 0.88in;
+}
+
+.eyebrow {
+  margin: 0 0 0.12in;
+  font-size: 0.11in;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hero h1 {
+  margin: 0;
+  max-width: 5.8in;
+  font-size: clamp(2.3rem, 5vw, 4.8rem);
+  line-height: 0.88;
+  letter-spacing: -0.08em;
+  font-weight: 600;
+}
+
+.hero-copy {
+  max-width: 4.6in;
+  margin: 0.24in 0 0;
+  font-size: 0.145in;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.18in;
+  margin-top: 0.22in;
+}
+
+.hero-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.11in;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero-links a:hover,
+.hero-links a:focus-visible {
+  text-decoration: underline;
+}
+
+.composition-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.overview-band {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.14in;
+  margin-bottom: 0.68in;
+}
+
+.overview-card {
+  min-height: 1.9in;
+  padding: 0.22in;
+  display: grid;
+  align-content: start;
+  gap: 0.1in;
+  border: 1px solid var(--border);
+  border-radius: 0.12in;
+  background: transparent;
+}
+
+.overview-card strong {
+  max-width: 2.5in;
+  font-size: 0.31in;
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+}
+
+.overview-card span:last-child {
+  max-width: 2.5in;
+  font-size: 0.128in;
+  line-height: 1.72;
+  color: var(--muted);
+}
+
+.composition-card {
+  min-height: 2.2in;
+  padding: 0.24in;
+  display: grid;
+  align-content: start;
+  gap: 0.1in;
+  text-decoration: none;
+  color: inherit;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+}
+
+.composition-card:hover,
+.composition-card:focus-visible {
+  outline: none;
+  background: var(--soft-accent);
+}
+
+.card-index {
+  font-size: 0.11in;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.composition-card strong {
+  font-size: 0.32in;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.composition-card span:last-child {
+  font-size: 0.135in;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.matrix-band {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 0.2in;
+  margin-top: 0.78in;
+  padding-top: 0.44in;
+  border-top: 1px solid var(--border);
+}
+
+.matrix-copy h2 {
+  max-width: 4.2in;
+  margin: 0;
+  font-size: 0.44in;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+  font-weight: 600;
+}
+
+.matrix-grid {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.matrix-row {
+  display: grid;
+  grid-template-columns: 1.2fr 0.78fr 1.02fr;
+}
+
+.matrix-row > * {
+  min-height: 0.86in;
+  padding: 0.16in 0.18in;
+  display: grid;
+  align-items: center;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.125in;
+  line-height: 1.6;
+}
+
+.matrix-head > * {
+  font-size: 0.1in;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.matrix-row strong {
+  font-size: 0.155in;
+  letter-spacing: -0.03em;
+}
+
+@media (max-width: 960px) {
+  .overview-band,
+  .composition-list {
+    grid-template-columns: 1fr;
+  }
+
+  .matrix-band,
+  .matrix-row {
+    grid-template-columns: 1fr;
+  }
+}

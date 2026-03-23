@@ -4,8 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sparkline Card</title>
-  <link rel="stylesheet" href="../theme.css?v=20260322b" />
-  <link rel="stylesheet" href="sparkline_card.css?v=20260322c" />
+  <script>
+    (function () {
+      var key = "assets-theme";
+      var theme = null;
+
+      try {
+        theme = localStorage.getItem(key);
+      } catch (error) {}
+
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      }
+
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="../theme.css?v=20260323a" />
+  <link rel="stylesheet" href="sparkline_card.css?v=20260323a" />
 </head>
 <body>
   <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
@@ -13,6 +31,8 @@
     <span class="theme-toggle-state">Light</span>
     <span class="theme-toggle-switch" aria-hidden="true"></span>
   </button>
+  <p id="sparkline-summary" class="sr-only">Activity sparkline card showing 18.6 thousand and an increase of 8 percent with a steady upward trend across seven bars.</p>
+  <main aria-labelledby="sparkline-summary">
   <article class="spark-card">
     <div class="copy-row">
       <div>
@@ -32,6 +52,7 @@
     </div>
     <p class="caption">Engagement rose steadily after the refresh.</p>
   </article>
-  <script src="../theme.js?v=20260322b"></script>
+  </main>
+  <script src="../theme.js?v=20260323a"></script>
 </body>
 </html>

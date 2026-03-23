@@ -3,9 +3,9 @@
   --card-height: 1.9in;
   --card-radius: 0.16in;
   --card-shadow: 0 24px 52px rgba(0, 0, 0, 0.14);
-  --ink: #f3f3f1;
-  --muted: rgba(243, 243, 241, 0.62);
-  --accent: #ff5a6c;
+  --ink: var(--theme-surface-strong);
+  --muted: rgba(255, 255, 255, 0.62);
+  --accent: var(--theme-accent);
   --positive: #ffffff;
   --card-bg: linear-gradient(180deg, #1a1a1a 0%, #0c0c0c 100%);
   --rule: rgba(255, 255, 255, 0.12);
@@ -13,9 +13,9 @@
 
 html[data-theme="dark"] {
   --card-shadow: 0 26px 56px rgba(0, 0, 0, 0.34);
-  --ink: #f3f3f1;
-  --muted: rgba(243, 243, 241, 0.62);
-  --accent: #ff6979;
+  --ink: var(--theme-surface-strong);
+  --muted: rgba(255, 255, 255, 0.62);
+  --accent: var(--theme-accent);
   --positive: #ffffff;
   --card-bg: linear-gradient(180deg, #191919 0%, #080808 100%);
   --rule: rgba(255, 255, 255, 0.12);

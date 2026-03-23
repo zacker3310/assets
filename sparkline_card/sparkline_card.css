@@ -1,25 +1,23 @@
 :root {
   --card-width: 3in;
   --card-height: 1.7in;
-  --bg: rgba(255, 255, 255, 0.9);
-  --ink: #121212;
-  --muted: #6e6e6e;
-  --border: rgba(20, 20, 20, 0.08);
-  --accent: #bb1e2d;
-  --accent-soft: rgba(187, 30, 45, 0.1);
-  --bar: linear-gradient(180deg, #2f2f2f 0%, #be1f2f 100%);
-  --shadow: 0 20px 46px rgba(0, 0, 0, 0.08);
+  --bg: var(--theme-surface);
+  --ink: var(--theme-text);
+  --muted: var(--theme-text-muted);
+  --border: var(--theme-border);
+  --accent: var(--theme-accent);
+  --accent-soft: var(--theme-accent-soft);
+  --bar: linear-gradient(180deg, var(--theme-neutral-strong) 0%, var(--theme-accent) 100%);
 }
 
 html[data-theme="dark"] {
-  --bg: rgba(11, 11, 11, 0.88);
-  --ink: #f3f3f1;
-  --muted: #939393;
-  --border: rgba(255, 255, 255, 0.08);
-  --accent: #ff5667;
-  --accent-soft: rgba(255, 86, 103, 0.12);
-  --bar: linear-gradient(180deg, #f1f1ef 0%, #ff5a6c 100%);
-  --shadow: 0 24px 52px rgba(0, 0, 0, 0.34);
+  --bg: var(--theme-surface);
+  --ink: var(--theme-text);
+  --muted: var(--theme-text-muted);
+  --border: var(--theme-border);
+  --accent: var(--theme-accent);
+  --accent-soft: var(--theme-accent-soft);
+  --bar: linear-gradient(180deg, var(--theme-neutral-strong) 0%, var(--theme-accent) 100%);
 }
 
 * {
@@ -40,11 +38,11 @@ body {
   width: var(--card-width);
   min-height: var(--card-height);
   padding: 0.22in;
-  border-radius: 0.16in;
+  border-radius: 0.12in;
   background: var(--bg);
   color: var(--ink);
   border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  box-shadow: none;
 }
 
 .copy-row {
@@ -77,6 +75,7 @@ h1 {
   color: var(--accent);
   font-size: 0.12in;
   font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
 .sparkline {

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Executive Dashboard | assets</title>
+  <meta
+    name="description"
+    content="A leadership-facing composition built from the assets component system for executive performance and readiness reviews."
+  />
+  <script>
+    (function () {
+      var key = "assets-theme";
+      var theme = null;
+
+      try {
+        theme = localStorage.getItem(key);
+      } catch (error) {}
+
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      }
+
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="theme.css?v=20260323a" />
+  <link rel="stylesheet" href="executive_dashboard.css?v=20260323a" />
+</head>
+<body>
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+    <span class="theme-toggle-label">Theme</span>
+    <span class="theme-toggle-state">Light</span>
+    <span class="theme-toggle-switch" aria-hidden="true"></span>
+  </button>
+  <main class="dashboard-shell">
+    <section class="dashboard-hero">
+      <p class="eyebrow">Executive Summary</p>
+      <h1>Q1 operating performance</h1>
+      <p class="hero-copy">A composed reporting surface built from the system’s base components and shared brand tokens.</p>
+      <div class="hero-links">
+        <a href="index.html">Home</a>
+        <a href="compositions.html">All compositions</a>
+        <a href="brand_guide.html">Brand guide</a>
+        <a href="CASE_STUDY.md">Case study</a>
+      </div>
+    </section>
+
+    <section class="dashboard-context">
+      <article>
+        <span class="panel-label">Audience</span>
+        <strong>Executive leadership</strong>
+        <span>Built for quarterly review, fast scanning, and portfolio-style presentation.</span>
+      </article>
+      <article>
+        <span class="panel-label">Focus</span>
+        <strong>Performance and readiness</strong>
+        <span>Combines revenue, momentum, delivery, distribution, and attainment in a single surface.</span>
+      </article>
+      <article>
+        <span class="panel-label">System Signal</span>
+        <strong>Component composition</strong>
+        <span>Uses the same static primitives, typography, and token model as the standalone library.</span>
+      </article>
+    </section>
+
+    <section class="dashboard-grid top-grid">
+      <article class="panel panel-metric">
+        <p class="panel-label">Revenue</p>
+        <div class="metric-row">
+          <strong>$2.84M</strong>
+          <span class="delta">+12.4%</span>
+        </div>
+        <p class="panel-note">Enterprise renewals and mix quality improved overall performance.</p>
+      </article>
+
+      <article class="panel panel-spark">
+        <div class="panel-head">
+          <p class="panel-label">Activity</p>
+          <span class="micro-pill">+8%</span>
+        </div>
+        <strong class="big-number">18.6k</strong>
+        <div class="sparkline" aria-hidden="true">
+          <span style="--value: 34%"></span>
+          <span style="--value: 46%"></span>
+          <span style="--value: 40%"></span>
+          <span style="--value: 58%"></span>
+          <span style="--value: 63%"></span>
+          <span style="--value: 72%"></span>
+          <span style="--value: 88%"></span>
+        </div>
+      </article>
+
+      <article class="panel panel-progress">
+        <div class="panel-head">
+          <p class="panel-label">Delivery</p>
+          <span class="panel-meta">April 2026</span>
+        </div>
+        <strong class="section-title">75% complete</strong>
+        <div class="progress-track" aria-hidden="true">
+          <span class="progress-fill"></span>
+          <span class="progress-rest"></span>
+        </div>
+      </article>
+    </section>
+
+    <section class="dashboard-grid lower-grid">
+      <article class="panel panel-bars">
+        <div class="panel-head">
+          <p class="panel-label">Revenue Distribution</p>
+          <span class="panel-meta">Quarter mix</span>
+        </div>
+        <div class="bar-list">
+          <div class="bar-row">
+            <span>Q1</span>
+            <div class="bar-track"><span class="bar-fill bar-fill-1"></span></div>
+            <strong>40%</strong>
+          </div>
+          <div class="bar-row">
+            <span>Q2</span>
+            <div class="bar-track"><span class="bar-fill bar-fill-2"></span></div>
+            <strong>20%</strong>
+          </div>
+          <div class="bar-row">
+            <span>Q3</span>
+            <div class="bar-track"><span class="bar-fill bar-fill-3"></span></div>
+            <strong>25%</strong>
+          </div>
+          <div class="bar-row">
+            <span>Q4</span>
+            <div class="bar-track"><span class="bar-fill bar-fill-4"></span></div>
+            <strong>15%</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel panel-donut">
+        <div class="panel-head">
+          <p class="panel-label">Target Attainment</p>
+          <span class="panel-meta">Portfolio split</span>
+        </div>
+        <div class="donut-layout">
+          <div class="donut">
+            <div class="donut-center">
+              <strong>82%</strong>
+              <span>Target</span>
+            </div>
+          </div>
+          <div class="legend">
+            <div><span class="swatch s1"></span><span>Q1</span><strong>40%</strong></div>
+            <div><span class="swatch s2"></span><span>Q2</span><strong>20%</strong></div>
+            <div><span class="swatch s3"></span><span>Q3</span><strong>25%</strong></div>
+            <div><span class="swatch s4"></span><span>Q4</span><strong>15%</strong></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="dashboard-note">
+      <div>
+        <p class="panel-label">Review Note</p>
+        <h2>Designed for decision velocity, not dashboard sprawl.</h2>
+      </div>
+      <p>
+        The composition favors a small number of strong signals, consistent labeling, and calm hierarchy so leadership can scan outcomes quickly without losing structure.
+      </p>
+    </section>
+  </main>
+  <script src="theme.js?v=20260323a"></script>
+</body>
+</html>

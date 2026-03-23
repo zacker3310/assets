@@ -4,8 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Timeline Steps</title>
-  <link rel="stylesheet" href="../theme.css?v=20260322b" />
-  <link rel="stylesheet" href="timeline_steps.css?v=20260322d" />
+  <script>
+    (function () {
+      var key = "assets-theme";
+      var theme = null;
+
+      try {
+        theme = localStorage.getItem(key);
+      } catch (error) {}
+
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      }
+
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="../theme.css?v=20260323a" />
+  <link rel="stylesheet" href="timeline_steps.css?v=20260323a" />
 </head>
 <body>
   <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
@@ -13,6 +31,8 @@
     <span class="theme-toggle-state">Light</span>
     <span class="theme-toggle-switch" aria-hidden="true"></span>
   </button>
+  <p id="timeline-summary" class="sr-only">Release plan timeline with Design complete, Build in progress, QA next, and Ship scheduled for April.</p>
+  <main aria-labelledby="timeline-summary">
   <section class="timeline-card">
     <div class="header-row">
       <div>
@@ -24,26 +44,27 @@
     <div class="timeline">
       <article class="step is-complete">
         <span class="dot"></span>
-        <strong>01</strong>
-        <span class="meta">Design</span>
+        <strong>Design</strong>
+        <span class="meta">Complete</span>
       </article>
       <article class="step is-current">
         <span class="dot"></span>
-        <strong>02</strong>
-        <span class="meta">Build</span>
+        <strong>Build</strong>
+        <span class="meta">In progress</span>
       </article>
       <article class="step">
         <span class="dot"></span>
-        <strong>03</strong>
-        <span class="meta">QA</span>
+        <strong>QA</strong>
+        <span class="meta">Next</span>
       </article>
       <article class="step">
         <span class="dot"></span>
-        <strong>04</strong>
-        <span class="meta">Ship</span>
+        <strong>Ship</strong>
+        <span class="meta">April</span>
       </article>
     </div>
   </section>
-  <script src="../theme.js?v=20260322b"></script>
+  </main>
+  <script src="../theme.js?v=20260323a"></script>
 </body>
 </html>

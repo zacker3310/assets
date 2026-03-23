@@ -2,12 +2,12 @@
   --card-width: 3.5in;
   --card-height: 1.9in;
   --pie-size: 1.18in;
-  --panel-bg: rgba(255, 255, 255, 0.9);
-  --panel-border: rgba(20, 20, 20, 0.08);
+  --panel-bg: var(--theme-surface);
+  --panel-border: var(--theme-border);
   --panel-shadow: 0 22px 48px rgba(0, 0, 0, 0.08);
-  --text-strong: #111111;
-  --text-muted: #6a6a6a;
-  --accent: #bb1e2d;
+  --text-strong: var(--theme-text);
+  --text-muted: var(--theme-text-muted);
+  --accent: var(--theme-accent);
   --q1-color: #141414;
   --q2-color: #494949;
   --q3-color: #83101e;
@@ -15,12 +15,12 @@
 }
 
 html[data-theme="dark"] {
-  --panel-bg: rgba(11, 11, 11, 0.88);
-  --panel-border: rgba(255, 255, 255, 0.08);
+  --panel-bg: var(--theme-surface);
+  --panel-border: var(--theme-border);
   --panel-shadow: 0 24px 52px rgba(0, 0, 0, 0.34);
-  --text-strong: #f3f3f1;
-  --text-muted: #939393;
-  --accent: #ff5465;
+  --text-strong: var(--theme-text);
+  --text-muted: var(--theme-text-muted);
+  --accent: var(--theme-accent);
   --q1-color: #f0f0ee;
   --q2-color: #8f8f8f;
   --q3-color: #b51e2e;

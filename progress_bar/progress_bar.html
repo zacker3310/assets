@@ -4,8 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Progress Bar</title>
-  <link rel="stylesheet" href="../theme.css?v=20260322b" />
-  <link rel="stylesheet" href="progress_bar.css?v=20260322d" />
+  <script>
+    (function () {
+      var key = "assets-theme";
+      var theme = null;
+
+      try {
+        theme = localStorage.getItem(key);
+      } catch (error) {}
+
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      }
+
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="../theme.css?v=20260323a" />
+  <link rel="stylesheet" href="progress_bar.css?v=20260323a" />
 </head>
 <body>
   <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
@@ -13,7 +31,8 @@
     <span class="theme-toggle-state">Light</span>
     <span class="theme-toggle-switch" aria-hidden="true"></span>
   </button>
-  <div class="bounding-box">
+  <p id="progress-summary" class="sr-only">Delivery progress card showing 75 percent complete with target date April 2026.</p>
+  <main class="bounding-box" aria-labelledby="progress-summary">
     <div class="progress-card">
       <div class="progress-copy">
         <p class="eyebrow">Delivery</p>
@@ -28,7 +47,7 @@
         <div class="progress-gloss"></div>
       </div>
     </div>
-  </div>
-  <script src="../theme.js?v=20260322b"></script>
+  </main>
+  <script src="../theme.js?v=20260323a"></script>
 </body>
 </html>

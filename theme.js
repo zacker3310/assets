@@ -49,6 +49,17 @@
 
   applyTheme(getPreferredTheme());
 
+  if (mediaQuery) {
+    mediaQuery.addEventListener("change", function (event) {
+      var savedTheme = readStoredTheme();
+      if (savedTheme === "light" || savedTheme === "dark") {
+        return;
+      }
+
+      applyTheme(event.matches ? "dark" : "light");
+    });
+  }
+
   if (!toggle) {
     return;
   }

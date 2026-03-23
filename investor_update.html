@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investor Update | assets</title>
+  <meta
+    name="description"
+    content="A board- and investor-facing summary composition built from the assets system for formal quarterly communication."
+  />
+  <script>
+    (function () {
+      var key = "assets-theme";
+      var theme = null;
+      try { theme = localStorage.getItem(key); } catch (error) {}
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="theme.css?v=20260323a" />
+  <link rel="stylesheet" href="investor_update.css?v=20260323a" />
+</head>
+<body>
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+    <span class="theme-toggle-label">Theme</span>
+    <span class="theme-toggle-state">Light</span>
+    <span class="theme-toggle-switch" aria-hidden="true"></span>
+  </button>
+  <main class="sheet-shell">
+    <section class="sheet-head">
+      <p class="eyebrow">Investor Update</p>
+      <h1>Quarterly summary sheet</h1>
+      <p class="head-copy">A board- and investor-facing composition combining KPI, performance mix, benchmark, and release trajectory.</p>
+      <div class="hero-links">
+        <a href="index.html">Home</a>
+        <a href="compositions.html">All compositions</a>
+        <a href="brand_guide.html">Brand guide</a>
+        <a href="CASE_STUDY.md">Case study</a>
+      </div>
+    </section>
+    <section class="sheet-context">
+      <article>
+        <span class="label">Audience</span>
+        <strong>Board and investor readers</strong>
+        <span>Structured for concise narrative review with enough operational evidence to support the headline.</span>
+      </article>
+      <article>
+        <span class="label">Format</span>
+        <strong>Single-sheet summary</strong>
+        <span>Balances headline performance, benchmark context, and release trajectory in one static composition.</span>
+      </article>
+    </section>
+    <section class="sheet-grid">
+      <article class="sheet-card hero-card">
+        <p class="label">Headline</p>
+        <strong>$2.84M revenue</strong>
+        <p>Growth accelerated on enterprise renewals, improving quality of mix and retention.</p>
+      </article>
+      <article class="sheet-card metric-card">
+        <p class="label">Retention</p>
+        <strong>94%</strong>
+        <span>Net dollar retention held steady.</span>
+      </article>
+      <article class="sheet-card metric-card">
+        <p class="label">Accounts</p>
+        <strong>83</strong>
+        <span>New accounts closed during the quarter.</span>
+      </article>
+      <article class="sheet-card bar-card">
+        <div class="card-head">
+          <p class="label">Revenue Distribution</p>
+          <span>Quarter mix</span>
+        </div>
+        <div class="rows">
+          <div><span>Q1</span><i><b style="width:40%"></b></i><strong>40%</strong></div>
+          <div><span>Q2</span><i><b style="width:20%"></b></i><strong>20%</strong></div>
+          <div><span>Q3</span><i><b style="width:25%"></b></i><strong>25%</strong></div>
+          <div><span>Q4</span><i><b style="width:15%"></b></i><strong>15%</strong></div>
+        </div>
+      </article>
+      <article class="sheet-card bullet-card">
+        <div class="card-head">
+          <p class="label">Target Attainment</p>
+          <span>Pipeline coverage</span>
+        </div>
+        <div class="bullet">
+          <span class="range low"></span>
+          <span class="range mid"></span>
+          <span class="range high"></span>
+          <span class="measure"></span>
+          <span class="target"></span>
+        </div>
+        <div class="bullet-meta">
+          <span>0%</span>
+          <span>Target 100%</span>
+          <span>120%</span>
+        </div>
+      </article>
+      <article class="sheet-card timeline-card">
+        <div class="card-head">
+          <p class="label">Program Readiness</p>
+          <span>Release plan</span>
+        </div>
+        <div class="timeline">
+          <div><b class="done"></b><strong>Design</strong><span>Complete</span></div>
+          <div><b class="current"></b><strong>Build</strong><span>Active</span></div>
+          <div><b></b><strong>QA</strong><span>Next</span></div>
+          <div><b></b><strong>Ship</strong><span>April</span></div>
+        </div>
+      </article>
+    </section>
+    <section class="sheet-footer-note">
+      <div>
+        <p class="label">Portfolio Note</p>
+        <h2>Purpose-built to show restraint under scrutiny.</h2>
+      </div>
+      <p>
+        The page avoids decorative excess and uses hierarchy, spacing, and component reuse to support a more formal external communication context.
+      </p>
+    </section>
+  </main>
+  <script src="theme.js?v=20260323a"></script>
+</body>
+</html>

@@ -4,8 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stat Card</title>
-  <link rel="stylesheet" href="../theme.css?v=20260322b" />
-  <link rel="stylesheet" href="stat_card.css?v=20260322c" />
+  <script>
+    (function () {
+      var key = "assets-theme";
+      var theme = null;
+
+      try {
+        theme = localStorage.getItem(key);
+      } catch (error) {}
+
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      }
+
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="../theme.css?v=20260323a" />
+  <link rel="stylesheet" href="stat_card.css?v=20260323a" />
 </head>
 <body>
   <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
@@ -13,6 +31,8 @@
     <span class="theme-toggle-state">Light</span>
     <span class="theme-toggle-switch" aria-hidden="true"></span>
   </button>
+  <p id="stat-card-summary" class="sr-only">Revenue stat card showing 2.84 million dollars, up 12.4 percent, with 83 new accounts and 94 percent retention.</p>
+  <main aria-labelledby="stat-card-summary">
   <article class="stat-card">
     <p class="eyebrow">Revenue</p>
     <div class="stat-row">
@@ -25,6 +45,7 @@
       <span>94% retention</span>
     </div>
   </article>
-  <script src="../theme.js?v=20260322b"></script>
+  </main>
+  <script src="../theme.js?v=20260323a"></script>
 </body>
 </html>

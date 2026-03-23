@@ -4,8 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leaderboard Card</title>
-  <link rel="stylesheet" href="../theme.css?v=20260322b" />
-  <link rel="stylesheet" href="leaderboard_card.css?v=20260322c" />
+  <script>
+    (function () {
+      var key = "assets-theme";
+      var theme = null;
+
+      try {
+        theme = localStorage.getItem(key);
+      } catch (error) {}
+
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      }
+
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="../theme.css?v=20260323a" />
+  <link rel="stylesheet" href="leaderboard_card.css?v=20260323a" />
 </head>
 <body>
   <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
@@ -13,6 +31,8 @@
     <span class="theme-toggle-state">Light</span>
     <span class="theme-toggle-switch" aria-hidden="true"></span>
   </button>
+  <p id="leaderboard-summary" class="sr-only">Top performers leaderboard for Q1 2026. Harper leads with 128 points, followed by Sofia with 117, Theo with 104, and Liam with 99.</p>
+  <main aria-labelledby="leaderboard-summary">
   <section class="leaderboard-card">
     <div class="header-row">
       <div>
@@ -44,6 +64,7 @@
       </div>
     </div>
   </section>
-  <script src="../theme.js?v=20260322b"></script>
+  </main>
+  <script src="../theme.js?v=20260323a"></script>
 </body>
 </html>

@@ -1,27 +1,25 @@
 :root {
   --card-width: 3.3in;
   --card-height: 2.15in;
-  --surface: rgba(255, 255, 255, 0.9);
-  --border: rgba(20, 20, 20, 0.08);
-  --ink: #111111;
-  --muted: #6b6b6b;
-  --accent: #bc1f2e;
-  --rank-bg: #efefeb;
-  --score-bg: rgba(194, 32, 48, 0.08);
-  --score-ink: #bc1f2e;
-  --shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
+  --surface: var(--theme-surface);
+  --border: var(--theme-border);
+  --ink: var(--theme-text);
+  --muted: var(--theme-text-muted);
+  --accent: var(--theme-accent);
+  --rank-bg: var(--theme-surface-muted);
+  --score-bg: var(--theme-accent-soft);
+  --score-ink: var(--theme-accent);
 }
 
 html[data-theme="dark"] {
-  --surface: rgba(11, 11, 11, 0.88);
-  --border: rgba(255, 255, 255, 0.08);
-  --ink: #f3f3f1;
-  --muted: #929292;
-  --accent: #ff596a;
-  --rank-bg: #202020;
-  --score-bg: rgba(255, 89, 106, 0.12);
-  --score-ink: #ff6575;
-  --shadow: 0 24px 52px rgba(0, 0, 0, 0.34);
+  --surface: var(--theme-surface);
+  --border: var(--theme-border);
+  --ink: var(--theme-text);
+  --muted: var(--theme-text-muted);
+  --accent: var(--theme-accent);
+  --rank-bg: var(--theme-surface-muted);
+  --score-bg: var(--theme-accent-soft);
+  --score-ink: var(--theme-accent);
 }
 
 * {
@@ -42,11 +40,11 @@ body {
   width: var(--card-width);
   min-height: var(--card-height);
   padding: 0.22in;
-  border-radius: 0.16in;
+  border-radius: 0.12in;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--ink);
-  box-shadow: var(--shadow);
+  box-shadow: none;
 }
 
 .header-row {
@@ -103,6 +101,7 @@ h1 {
 
 .name {
   font-size: 0.14in;
+  letter-spacing: -0.02em;
 }
 
 .score {

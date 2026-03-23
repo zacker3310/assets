@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operating Review | assets</title>
+  <meta
+    name="description"
+    content="A dense internal operating review composition from the assets system for recurring leadership and delivery check-ins."
+  />
+  <script>
+    (function () {
+      var key = "assets-theme";
+      var theme = null;
+      try { theme = localStorage.getItem(key); } catch (error) {}
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="theme.css?v=20260323a" />
+  <link rel="stylesheet" href="operating_review.css?v=20260323a" />
+</head>
+<body>
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+    <span class="theme-toggle-label">Theme</span>
+    <span class="theme-toggle-state">Light</span>
+    <span class="theme-toggle-switch" aria-hidden="true"></span>
+  </button>
+  <main class="review-shell">
+    <section class="review-head">
+      <p class="eyebrow">Operating Review</p>
+      <h1>Performance, delivery, and team output.</h1>
+      <p class="head-copy">A denser internal review layout designed for operating cadences and functional leadership updates.</p>
+      <div class="hero-links">
+        <a href="index.html">Home</a>
+        <a href="compositions.html">All compositions</a>
+        <a href="brand_guide.html">Brand guide</a>
+        <a href="CASE_STUDY.md">Case study</a>
+      </div>
+    </section>
+    <section class="review-context">
+      <article>
+        <span class="label">Audience</span>
+        <strong>Functional leadership</strong>
+        <span>Optimized for regular operating cadence reviews where speed and comparability matter more than ornament.</span>
+      </article>
+      <article>
+        <span class="label">Rhythm</span>
+        <strong>Weekly or monthly readout</strong>
+        <span>Uses a denser ratio of signal to prose so teams can review delivery, activity, and ranking quickly.</span>
+      </article>
+    </section>
+    <section class="review-grid">
+      <article class="review-card large">
+        <div class="head-row">
+          <p class="label">Delivery status</p>
+          <span>April 2026</span>
+        </div>
+        <strong>75% complete</strong>
+        <div class="progress-track"><span class="fill"></span><span class="rest"></span></div>
+        <p>Execution remains aligned across build, QA prep, and launch readiness.</p>
+      </article>
+      <article class="review-card">
+        <p class="label">Activity</p>
+        <strong>18.6k</strong>
+        <div class="sparkline" aria-hidden="true">
+          <span style="--value: 34%"></span>
+          <span style="--value: 46%"></span>
+          <span style="--value: 40%"></span>
+          <span style="--value: 58%"></span>
+          <span style="--value: 63%"></span>
+          <span style="--value: 72%"></span>
+          <span style="--value: 88%"></span>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="head-row">
+          <p class="label">Top performers</p>
+          <span>Q1 2026</span>
+        </div>
+        <div class="leaderboard">
+          <div><span>1</span><b>Harper</b><strong>128</strong></div>
+          <div><span>2</span><b>Sofia</b><strong>117</strong></div>
+          <div><span>3</span><b>Theo</b><strong>104</strong></div>
+          <div><span>4</span><b>Liam</b><strong>99</strong></div>
+        </div>
+      </article>
+    </section>
+    <section class="review-footer-note">
+      <div>
+        <p class="label">Operating Principle</p>
+        <h2>Dense enough for recurring review, calm enough to stay readable.</h2>
+      </div>
+      <p>
+        The composition keeps the visual vocabulary narrow so repeated use feels consistent and maintainable rather than noisy over time.
+      </p>
+    </section>
+  </main>
+  <script src="theme.js?v=20260323a"></script>
+</body>
+</html>

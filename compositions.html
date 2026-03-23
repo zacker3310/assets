@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compositions | assets</title>
+  <meta
+    name="description"
+    content="Approved composition layouts for executive reporting, investor communication, and operating review scenarios."
+  />
+  <script>
+    (function () {
+      var key = "assets-theme";
+      var theme = null;
+
+      try {
+        theme = localStorage.getItem(key);
+      } catch (error) {}
+
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      }
+
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="theme.css?v=20260323a" />
+  <link rel="stylesheet" href="compositions.css?v=20260323a" />
+</head>
+<body>
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+    <span class="theme-toggle-label">Theme</span>
+    <span class="theme-toggle-state">Light</span>
+    <span class="theme-toggle-switch" aria-hidden="true"></span>
+  </button>
+  <main class="composition-shell">
+    <section class="hero">
+      <p class="eyebrow">Approved Layouts</p>
+      <h1>Reference compositions for enterprise reporting.</h1>
+      <p class="hero-copy">Examples that show how the components can be assembled into portfolio-worthy, system-consistent outputs.</p>
+      <div class="hero-links">
+        <a href="index.html">Home</a>
+        <a href="brand_guide.html">Brand guide</a>
+        <a href="CASE_STUDY.md">Case study</a>
+        <a href="USAGE.md">Usage guide</a>
+      </div>
+    </section>
+
+    <section class="overview-band">
+      <article class="overview-card">
+        <span class="card-index">01</span>
+        <strong>Leadership ready</strong>
+        <span>Layouts are structured for executive, investor, and operating review cadences rather than generic dashboard browsing.</span>
+      </article>
+      <article class="overview-card">
+        <span class="card-index">02</span>
+        <strong>Built from shared rules</strong>
+        <span>Each page uses the same token, theme, and component language so the compositions feel governed, not improvised.</span>
+      </article>
+      <article class="overview-card">
+        <span class="card-index">03</span>
+        <strong>Useful in a portfolio</strong>
+        <span>The pages show a design-system story: object design, composition, governance, and enterprise-oriented presentation.</span>
+      </article>
+    </section>
+
+    <section class="composition-list">
+      <a class="composition-card" href="executive_dashboard.html">
+        <span class="card-index">01</span>
+        <strong>Executive dashboard</strong>
+        <span>KPI, trend, status, distribution, and portfolio mix in one reporting surface.</span>
+      </a>
+      <a class="composition-card" href="investor_update.html">
+        <span class="card-index">02</span>
+        <strong>Investor update sheet</strong>
+        <span>Structured summary sheet combining KPI, benchmark, mix, and milestone context.</span>
+      </a>
+      <a class="composition-card" href="operating_review.html">
+        <span class="card-index">03</span>
+        <strong>Operating review panel</strong>
+        <span>Internal review layout pairing status, activity trend, and team ranking.</span>
+      </a>
+    </section>
+
+    <section class="matrix-band">
+      <div class="matrix-copy">
+        <p class="eyebrow">Usage Matrix</p>
+        <h2>Each composition is designed for a different decision context.</h2>
+      </div>
+      <div class="matrix-grid" role="table" aria-label="Composition usage matrix">
+        <div class="matrix-row matrix-head" role="row">
+          <span role="columnheader">Composition</span>
+          <span role="columnheader">Audience</span>
+          <span role="columnheader">Primary use</span>
+        </div>
+        <div class="matrix-row" role="row">
+          <strong role="cell">Executive dashboard</strong>
+          <span role="cell">Leadership</span>
+          <span role="cell">Quarterly operating snapshot</span>
+        </div>
+        <div class="matrix-row" role="row">
+          <strong role="cell">Investor update</strong>
+          <span role="cell">Board / investor</span>
+          <span role="cell">Narrative summary sheet</span>
+        </div>
+        <div class="matrix-row" role="row">
+          <strong role="cell">Operating review</strong>
+          <span role="cell">Functional leads</span>
+          <span role="cell">Weekly cadence review</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="theme.js?v=20260323a"></script>
+</body>
+</html>

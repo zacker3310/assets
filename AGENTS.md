@@ -10,6 +10,12 @@ This repository contains static, self-contained HTML/CSS assets intended for bro
 - No external runtime dependencies should be introduced by default.
 - Every component page should stay directly openable in a browser.
 - Shared light/dark mode behavior lives in `theme.css` and `theme.js`.
+- Cache-busting rules live in `VERSIONING.md`.
+- Manual regression guidance lives in `QA.md`.
+- Brand-level guidance lives in `BRAND_GUIDE.md`, `TOKENS.md`, and `brand_guide.html`.
+- Contribution and governance guidance live in `CONTRIBUTING.md` and `GOVERNANCE.md`.
+- Business-context guidance lives in `USAGE.md`.
+- Composition-level showcase pages live in `compositions.html` and `executive_dashboard.html`.
 
 ## Change Checklist
 

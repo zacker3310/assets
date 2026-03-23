@@ -1,0 +1,84 @@
+:root {
+  --card-width: 3.1in;
+  --card-height: 1.9in;
+  --card-radius: 0.22in;
+  --card-shadow: 0 16px 34px rgba(20, 35, 31, 0.18);
+  --ink: #f9fbf7;
+  --muted: rgba(249, 251, 247, 0.72);
+  --accent: #f4b266;
+  --positive: #b9f3c7;
+  --card-bg: linear-gradient(145deg, #103c33 0%, #1f5a4f 55%, #184a73 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.stat-card {
+  width: var(--card-width);
+  min-height: var(--card-height);
+  padding: 0.24in;
+  border-radius: var(--card-radius);
+  color: var(--ink);
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+
+.eyebrow {
+  margin: 0 0 0.1in;
+  font-size: 0.13in;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.stat-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.18in;
+}
+
+h1 {
+  margin: 0;
+  font-size: 0.58in;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
+
+.delta {
+  margin-top: 0.04in;
+  padding: 0.05in 0.1in;
+  border-radius: 999px;
+  font-size: 0.14in;
+  font-weight: 700;
+  color: #123e30;
+  background: var(--positive);
+}
+
+.context {
+  margin: 0.18in 0 0.24in;
+  max-width: 2.35in;
+  font-size: 0.16in;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.12in;
+  padding-top: 0.14in;
+  border-top: 1px solid rgba(249, 251, 247, 0.14);
+  font-size: 0.14in;
+  color: var(--ink);
+}

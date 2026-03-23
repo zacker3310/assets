@@ -1,0 +1,101 @@
+:root {
+  color-scheme: light;
+  --page-bg: linear-gradient(135deg, #f4efe6 0%, #e6f0ea 45%, #eef5ff 100%);
+  --panel-bg: rgba(255, 255, 255, 0.8);
+  --panel-border: rgba(34, 52, 45, 0.12);
+  --text-strong: #163127;
+  --text-muted: #4f675e;
+  --accent: #0f766e;
+  --accent-warm: #c26a2e;
+  --shadow: 0 20px 55px rgba(22, 49, 39, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  background: var(--page-bg);
+  color: var(--text-strong);
+}
+
+.page-shell {
+  width: min(11in, calc(100vw - 2rem));
+  margin: 0 auto;
+  padding: 1.25in 0 1in;
+}
+
+.hero {
+  max-width: 7in;
+  margin-bottom: 0.8in;
+}
+
+.eyebrow {
+  margin: 0 0 0.12in;
+  font-size: 0.16in;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 5vw, 3.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.hero-copy {
+  max-width: 5.8in;
+  margin: 0.22in 0 0;
+  font-size: 0.19in;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2.35in, 1fr));
+  gap: 0.28in;
+}
+
+.asset-card {
+  display: grid;
+  gap: 0.1in;
+  padding: 0.28in;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 0.24in;
+  border: 1px solid var(--panel-border);
+  background: var(--panel-bg);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.asset-card:hover {
+  transform: translateY(-0.04in);
+  box-shadow: 0 24px 60px rgba(22, 49, 39, 0.16);
+  border-color: rgba(15, 118, 110, 0.26);
+}
+
+.asset-kicker {
+  font-size: 0.14in;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-warm);
+}
+
+.asset-card strong {
+  font-size: 0.28in;
+  line-height: 1.05;
+}
+
+.asset-card span:last-child {
+  font-size: 0.16in;
+  line-height: 1.55;
+  color: var(--text-muted);
+}

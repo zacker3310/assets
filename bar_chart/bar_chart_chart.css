@@ -1,67 +1,121 @@
-/* Full Page Background */
+:root {
+  --chart-width: 3.35in;
+  --chart-height: 2.1in;
+  --track-color: #edf1f0;
+  --text-strong: #1d372d;
+  --text-muted: #6a7b74;
+  --panel-bg: #ffffff;
+  --panel-shadow: 0 16px 36px rgba(16, 41, 33, 0.12);
+  --q1-color: #3ccf91;
+  --q2-color: #58a6ff;
+  --q3-color: #f170ae;
+  --q4-color: #f2c94c;
+}
+
+/* Full page background */
 body {
   margin: 0;
   padding: 0;
   background: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
 }
 
-/* Chart wrapper (2.5in x 1.4in) */
+/* Chart wrapper */
 .chart-wrapper {
-  width: 2.5in;
-  height: 1.4in;
+  width: var(--chart-width);
+  min-height: var(--chart-height);
   background: transparent;
-  display: flex;
-  align-items: center;
 }
 
-/* Bar group – vertical stack of bar rows */
+/* Card shell */
+.chart-card {
+  width: 100%;
+  min-height: 100%;
+  padding: 0.24in;
+  border-radius: 0.2in;
+  background: var(--panel-bg);
+  box-shadow: var(--panel-shadow);
+}
+
+/* Header copy */
+.chart-header {
+  margin-bottom: 0.18in;
+}
+
+.eyebrow {
+  margin: 0 0 0.08in;
+  font-size: 0.12in;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1f8a70;
+}
+
+.chart-header strong {
+  font-size: 0.24in;
+  color: var(--text-strong);
+}
+
+/* Bar group */
 .bar-group {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.15in;
+  gap: 0.13in;
 }
 
-/* Bar track – full-width background rail */
+/* Bar row */
+.bar-row {
+  display: grid;
+  grid-template-columns: 0.38in 1fr 0.34in;
+  align-items: center;
+  gap: 0.1in;
+}
+
+.bar-label,
+.bar-value {
+  font-size: 0.14in;
+  color: var(--text-muted);
+}
+
+/* Bar track */
 .bar-track {
   width: 100%;
-  height: 0.2in;
-  background-color: #e5e7eb;
+  height: 0.16in;
+  background-color: var(--track-color);
   border-radius: 0.04in;
   overflow: hidden;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Bar fill – colored segment inside the track */
+/* Bar fill */
 .bar {
   height: 100%;
   border-radius: 0.04in;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.24);
 }
 
-/* Q1 – Green, 40% */
+/* Q1 */
 .bar-q1 {
   width: 40%;
-  background-color: #4ade80;
+  background: linear-gradient(90deg, #2eb67d 0%, var(--q1-color) 100%);
 }
 
-/* Q2 – Blue, 20% */
+/* Q2 */
 .bar-q2 {
   width: 20%;
-  background-color: #60a5fa;
+  background: linear-gradient(90deg, #4a8fe2 0%, var(--q2-color) 100%);
 }
 
-/* Q3 – Pink, 25% */
+/* Q3 */
 .bar-q3 {
   width: 25%;
-  background-color: #f472b6;
+  background: linear-gradient(90deg, #dc5d9d 0%, var(--q3-color) 100%);
 }
 
-/* Q4 – Yellow, 15% */
+/* Q4 */
 .bar-q4 {
   width: 15%;
-  background-color: #facc15;
+  background: linear-gradient(90deg, #dfa928 0%, var(--q4-color) 100%);
 }

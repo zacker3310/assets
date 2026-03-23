@@ -12,7 +12,7 @@ This repo uses manual cache-busting query strings for static assets served by Gi
   - `theme.js`
   - the page-local stylesheet for that HTML file
 - Current token format: `YYYYMMDD[a-z]`
-  - Example: `20260323a`
+  - Current token: `20260323c`
 
 ## When To Bump
 

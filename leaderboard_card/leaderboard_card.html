@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leaderboard Card</title>
+  <title>Leaderboard Card Specimen | assets</title>
+  <meta
+    name="description"
+    content="Standalone leaderboard card specimen from the assets system for ranking and performance scorecards."
+  />
   <script>
     (function () {
       var key = "assets-theme";
@@ -22,49 +26,71 @@
       document.documentElement.dataset.theme = theme;
     })();
   </script>
-  <link rel="stylesheet" href="../theme.css?v=20260323a" />
-  <link rel="stylesheet" href="leaderboard_card.css?v=20260323a" />
+  <link rel="stylesheet" href="../theme.css?v=20260323c" />
+  <link rel="stylesheet" href="leaderboard_card.css?v=20260323c" />
 </head>
 <body>
-  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
-    <span class="theme-toggle-label">Theme</span>
-    <span class="theme-toggle-state">Light</span>
-    <span class="theme-toggle-switch" aria-hidden="true"></span>
-  </button>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="../index.html">
+        <span class="site-brand-mark">assets</span>
+        <span class="site-brand-copy">Editorial enterprise component guide</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../brand_guide.html">Brand guide</a>
+        <a href="../compositions.html">Compositions</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="theme-toggle-label">Theme</span>
+        <span class="theme-toggle-state">Light</span>
+        <span class="theme-toggle-switch" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
   <p id="leaderboard-summary" class="sr-only">Top performers leaderboard for Q1 2026. Harper leads with 128 points, followed by Sofia with 117, Theo with 104, and Liam with 99.</p>
-  <main aria-labelledby="leaderboard-summary">
-  <section class="leaderboard-card">
-    <div class="header-row">
+  <main class="specimen-shell">
+    <section class="specimen-intro">
       <div>
-        <p class="eyebrow">Ranking</p>
-        <h1>Top performers</h1>
+        <p class="specimen-kicker">Component Specimen</p>
+        <h1 class="specimen-title">Leaderboard Card</h1>
       </div>
-      <span class="period">Q1 2026</span>
-    </div>
-    <div class="rows">
-      <div class="row">
-        <span class="rank">1</span>
-        <span class="name">Harper</span>
-        <span class="score">128 pts</span>
-      </div>
-      <div class="row">
-        <span class="rank">2</span>
-        <span class="name">Sofia</span>
-        <span class="score">117 pts</span>
-      </div>
-      <div class="row">
-        <span class="rank">3</span>
-        <span class="name">Theo</span>
-        <span class="score">104 pts</span>
-      </div>
-      <div class="row">
-        <span class="rank">4</span>
-        <span class="name">Liam</span>
-        <span class="score">99 pts</span>
-      </div>
-    </div>
-  </section>
+      <p class="specimen-note">Ranking object for performance scorecards, team standings, and campaign leaderboards.</p>
+    </section>
+    <section class="specimen-stage" aria-labelledby="leaderboard-summary">
+      <section class="leaderboard-card">
+        <div class="header-row">
+          <div>
+            <p class="eyebrow">Ranking</p>
+            <h1>Top performers</h1>
+          </div>
+          <span class="period">Q1 2026</span>
+        </div>
+        <div class="rows">
+          <div class="row">
+            <span class="rank">1</span>
+            <span class="name">Harper</span>
+            <span class="score">128 pts</span>
+          </div>
+          <div class="row">
+            <span class="rank">2</span>
+            <span class="name">Sofia</span>
+            <span class="score">117 pts</span>
+          </div>
+          <div class="row">
+            <span class="rank">3</span>
+            <span class="name">Theo</span>
+            <span class="score">104 pts</span>
+          </div>
+          <div class="row">
+            <span class="rank">4</span>
+            <span class="name">Liam</span>
+            <span class="score">99 pts</span>
+          </div>
+        </div>
+      </section>
+    </section>
   </main>
-  <script src="../theme.js?v=20260323a"></script>
+  <script src="../theme.js?v=20260323c"></script>
 </body>
 </html>

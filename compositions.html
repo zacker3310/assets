@@ -26,15 +26,29 @@
       document.documentElement.dataset.theme = theme;
     })();
   </script>
-  <link rel="stylesheet" href="theme.css?v=20260323a" />
-  <link rel="stylesheet" href="compositions.css?v=20260323a" />
+  <link rel="stylesheet" href="theme.css?v=20260323c" />
+  <link rel="stylesheet" href="compositions.css?v=20260323c" />
 </head>
 <body>
-  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
-    <span class="theme-toggle-label">Theme</span>
-    <span class="theme-toggle-state">Light</span>
-    <span class="theme-toggle-switch" aria-hidden="true"></span>
-  </button>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="index.html">
+        <span class="site-brand-mark">assets</span>
+        <span class="site-brand-copy">Editorial enterprise component guide</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="brand_guide.html">Brand guide</a>
+        <a href="compositions.html" aria-current="page">Compositions</a>
+        <a href="CASE_STUDY.md">Case study</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="theme-toggle-label">Theme</span>
+        <span class="theme-toggle-state">Light</span>
+        <span class="theme-toggle-switch" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
   <main class="composition-shell">
     <section class="hero">
       <p class="eyebrow">Approved Layouts</p>
@@ -67,20 +81,39 @@
     </section>
 
     <section class="composition-list">
-      <a class="composition-card" href="executive_dashboard.html">
+      <a class="composition-card composition-card-featured" href="executive_dashboard.html">
         <span class="card-index">01</span>
         <strong>Executive dashboard</strong>
         <span>KPI, trend, status, distribution, and portfolio mix in one reporting surface.</span>
+        <div class="composition-preview composition-preview-dashboard" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </a>
       <a class="composition-card" href="investor_update.html">
         <span class="card-index">02</span>
         <strong>Investor update sheet</strong>
         <span>Structured summary sheet combining KPI, benchmark, mix, and milestone context.</span>
+        <div class="composition-preview composition-preview-sheet" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </a>
       <a class="composition-card" href="operating_review.html">
         <span class="card-index">03</span>
         <strong>Operating review panel</strong>
         <span>Internal review layout pairing status, activity trend, and team ranking.</span>
+        <div class="composition-preview composition-preview-review" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </a>
     </section>
 
@@ -113,6 +146,6 @@
       </div>
     </section>
   </main>
-  <script src="theme.js?v=20260323a"></script>
+  <script src="theme.js?v=20260323c"></script>
 </body>
 </html>

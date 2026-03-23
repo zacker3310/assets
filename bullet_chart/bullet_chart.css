@@ -1,56 +1,36 @@
 :root {
-  --card-width: 3.25in;
-  --card-height: 1.75in;
-  --surface: var(--theme-surface);
-  --border: var(--theme-border);
+  --card-width: 3.3in;
+  --card-height: 1.8in;
+  --surface: linear-gradient(180deg, var(--theme-surface-strong) 0%, var(--theme-surface) 100%);
+  --border: var(--theme-border-strong);
   --ink: var(--theme-text);
   --muted: var(--theme-text-muted);
   --accent: var(--theme-accent);
-  --range-low: #efefec;
-  --range-mid: #d6d6d2;
-  --range-high: #bcbcb7;
-  --measure: linear-gradient(90deg, #111111 0%, #be1f2f 100%);
-  --target: #ffffff;
-  --shadow: 0 20px 46px rgba(0, 0, 0, 0.08);
+  --range-low: var(--theme-surface-muted);
+  --range-mid: #d6ccc0;
+  --range-high: #b9afa4;
+  --measure: linear-gradient(90deg, var(--theme-neutral-strong) 0%, var(--theme-accent) 100%);
+  --target: var(--theme-surface-strong);
 }
 
 html[data-theme="dark"] {
-  --surface: var(--theme-surface);
-  --border: var(--theme-border);
-  --ink: var(--theme-text);
-  --muted: var(--theme-text-muted);
-  --accent: var(--theme-accent);
-  --range-low: #1a1a1a;
-  --range-mid: #282828;
-  --range-high: #363636;
-  --measure: linear-gradient(90deg, #f3f3f1 0%, #ff5b6c 100%);
-  --target: #f3f3f1;
-  --shadow: 0 24px 52px rgba(0, 0, 0, 0.34);
-}
-
-* {
-  box-sizing: border-box;
+  --range-mid: #2a2325;
+  --range-high: #383032;
 }
 
 body {
   margin: 0;
-  padding: 0.7in 0.24in 0.24in;
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  background: var(--theme-page-bg);
-  font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .bullet-card {
   width: var(--card-width);
   min-height: var(--card-height);
   padding: 0.22in;
-  border-radius: 0.16in;
+  border-radius: var(--theme-radius-md);
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--ink);
-  box-shadow: var(--shadow);
+  box-shadow: var(--theme-shadow-xs);
 }
 
 .card-head {
@@ -88,7 +68,7 @@ h1 {
   grid-template-columns: 0.28fr 0.36fr 0.36fr;
   height: 0.26in;
   margin-top: 0.22in;
-  border-radius: 999px;
+  border-radius: var(--theme-radius-pill);
   overflow: hidden;
 }
 
@@ -103,7 +83,7 @@ h1 {
   left: 0.14in;
   width: 76%;
   height: 0.18in;
-  border-radius: 999px;
+  border-radius: var(--theme-radius-pill);
   background: var(--measure);
 }
 
@@ -113,7 +93,7 @@ h1 {
   left: 82%;
   width: 0.03in;
   height: 0.32in;
-  border-radius: 999px;
+  border-radius: var(--theme-radius-pill);
   background: var(--target);
 }
 

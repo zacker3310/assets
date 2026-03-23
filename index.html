@@ -26,28 +26,73 @@
       document.documentElement.dataset.theme = theme;
     })();
   </script>
-  <link rel="stylesheet" href="theme.css?v=20260323a" />
-  <link rel="stylesheet" href="index.css?v=20260323a" />
+  <link rel="stylesheet" href="theme.css?v=20260323c" />
+  <link rel="stylesheet" href="index.css?v=20260323c" />
 </head>
 <body>
-  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
-    <span class="theme-toggle-label">Theme</span>
-    <span class="theme-toggle-state">Light</span>
-    <span class="theme-toggle-switch" aria-hidden="true"></span>
-  </button>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="index.html">
+        <span class="site-brand-mark">assets</span>
+        <span class="site-brand-copy">Editorial enterprise component guide</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="brand_guide.html">Brand guide</a>
+        <a href="compositions.html">Compositions</a>
+        <a href="CASE_STUDY.md">Case study</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="theme-toggle-label">Theme</span>
+        <span class="theme-toggle-state">Light</span>
+        <span class="theme-toggle-switch" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
   <main class="page-shell">
     <section class="hero">
-      <p class="eyebrow">Enterprise Brand Component Guide</p>
-      <h1>Static components, governed like a real system.</h1>
-      <p class="hero-copy">
-        A portfolio-grade design system built for executive reporting, investor communication, and lightweight product surfaces.
-      </p>
-      <div class="hero-rule"></div>
-      <div class="hero-links">
-        <a href="brand_guide.html">Open brand guide</a>
-        <a href="compositions.html">View compositions</a>
-        <a href="CASE_STUDY.md">Read case study</a>
-        <a href="README.md">Read repository guide</a>
+      <div class="hero-layout">
+        <div class="hero-copy-block">
+          <p class="eyebrow">Enterprise Brand Component Guide</p>
+          <h1>Static components, governed like a real system.</h1>
+          <p class="hero-copy">
+            A portfolio-grade design system built for executive reporting, investor communication, and lightweight product surfaces.
+          </p>
+          <div class="hero-actions">
+            <a class="hero-action hero-action-primary" href="compositions.html">See flagship compositions</a>
+            <a class="hero-action" href="brand_guide.html">Explore the brand guide</a>
+          </div>
+          <div class="hero-links">
+            <a href="CASE_STUDY.md">Read case study</a>
+            <a href="README.md">Repository guide</a>
+            <a href="TOKENS.md">Token reference</a>
+            <a href="GOVERNANCE.md">Governance</a>
+          </div>
+        </div>
+        <aside class="hero-rail" aria-label="System preview">
+          <article class="hero-preview hero-preview-main">
+            <span class="asset-kicker">System Snapshot</span>
+            <strong>Three flagship compositions. Eight reusable assets.</strong>
+            <div class="hero-diagram" aria-hidden="true">
+              <span class="hero-diagram-panel hero-diagram-panel--wide"></span>
+              <span class="hero-diagram-panel"></span>
+              <span class="hero-diagram-panel"></span>
+              <span class="hero-diagram-bar hero-diagram-bar--strong"></span>
+              <span class="hero-diagram-bar"></span>
+              <span class="hero-diagram-bar hero-diagram-bar--accent"></span>
+            </div>
+          </article>
+          <div class="hero-rail-grid">
+            <article class="hero-preview">
+              <span class="asset-kicker">Light / Dark</span>
+              <strong>One token model, two fully articulated themes.</strong>
+            </article>
+            <article class="hero-preview">
+              <span class="asset-kicker">Governance</span>
+              <strong>Brand, QA, contribution, and release rules travel with the code.</strong>
+            </article>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -98,68 +143,146 @@
         <span class="asset-kicker">Flagship composition</span>
         <strong>Executive dashboard</strong>
         <span>Multi-panel reporting surface for leadership reviews and portfolio presentation.</span>
+        <div class="feature-preview feature-preview-dashboard" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </a>
       <a class="feature-card" href="investor_update.html">
         <span class="asset-kicker">Reference sheet</span>
         <strong>Investor update</strong>
         <span>Structured quarterly summary designed for investor, board, or leadership communication.</span>
+        <div class="feature-preview feature-preview-sheet" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </a>
       <a class="feature-card" href="operating_review.html">
         <span class="asset-kicker">Internal review</span>
         <strong>Operating review</strong>
         <span>Dense operational layout for delivery status, activity, and performance ranking.</span>
+        <div class="feature-preview feature-preview-review" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </a>
     </section>
 
-    <section class="gallery">
-      <a class="asset-card" href="bar_chart/bar_chart_chart.html">
-        <span class="asset-index">01</span>
-        <span class="asset-kicker">Chart</span>
-        <strong>Bar Chart</strong>
-        <span>Measured comparison with restrained contrast.</span>
-      </a>
-      <a class="asset-card" href="pie_chart/pie_chart_chart.html">
-        <span class="asset-index">02</span>
-        <span class="asset-kicker">Chart</span>
-        <strong>Donut Chart</strong>
-        <span>Reduced circular summary with numeric center.</span>
-      </a>
-      <a class="asset-card" href="progress_bar/progress_bar.html">
-        <span class="asset-index">03</span>
-        <span class="asset-kicker">Status</span>
-        <strong>Progress Bar</strong>
-        <span>Status display pared down to the essentials.</span>
-      </a>
-      <a class="asset-card" href="stat_card/stat_card.html">
-        <span class="asset-index">04</span>
-        <span class="asset-kicker">Metric</span>
-        <strong>Stat Card</strong>
-        <span>Single-metric surface with sharp hierarchy.</span>
-      </a>
-      <a class="asset-card" href="sparkline_card/sparkline_card.html">
-        <span class="asset-index">05</span>
-        <span class="asset-kicker">Trend</span>
-        <strong>Sparkline Card</strong>
-        <span>Trend readout with minimal signal bars.</span>
-      </a>
-      <a class="asset-card" href="bullet_chart/bullet_chart.html">
-        <span class="asset-index">06</span>
-        <span class="asset-kicker">Benchmark</span>
-        <strong>Bullet Chart</strong>
-        <span>Benchmark readout with target and range context.</span>
-      </a>
-      <a class="asset-card" href="timeline_steps/timeline_steps.html">
-        <span class="asset-index">07</span>
-        <span class="asset-kicker">Roadmap</span>
-        <strong>Timeline Steps</strong>
-        <span>Phase tracker reduced to line, point, and label.</span>
-      </a>
-      <a class="asset-card" href="leaderboard_card/leaderboard_card.html">
-        <span class="asset-index">08</span>
-        <span class="asset-kicker">Ranking</span>
-        <strong>Leaderboard Card</strong>
-        <span>Ranked performance list in a single quiet card.</span>
-      </a>
+    <section class="library-band">
+      <div class="library-intro">
+        <p class="eyebrow">Core Library</p>
+        <h2>Reusable specimens, quieter on the page and sharper in detail.</h2>
+        <p>
+          The standalone objects stay compact and print-aware, but now sit inside a more deliberate system presentation.
+        </p>
+      </div>
+      <div class="gallery">
+        <a class="asset-card" href="bar_chart/bar_chart_chart.html">
+          <span class="asset-index">01</span>
+          <span class="asset-kicker">Chart</span>
+          <strong>Bar Chart</strong>
+          <span class="asset-description">Measured comparison with restrained contrast.</span>
+          <div class="asset-preview asset-preview-bars" aria-hidden="true">
+            <span class="asset-bar asset-bar-1"></span>
+            <span class="asset-bar asset-bar-2"></span>
+            <span class="asset-bar asset-bar-3"></span>
+            <span class="asset-bar asset-bar-4"></span>
+          </div>
+        </a>
+        <a class="asset-card" href="pie_chart/pie_chart_chart.html">
+          <span class="asset-index">02</span>
+          <span class="asset-kicker">Chart</span>
+          <strong>Donut Chart</strong>
+          <span class="asset-description">Reduced circular summary with numeric center.</span>
+          <div class="asset-preview asset-preview-donut" aria-hidden="true">
+            <span class="asset-donut-ring"></span>
+            <span class="asset-donut-legend">
+              <i></i>
+              <i></i>
+              <i></i>
+            </span>
+          </div>
+        </a>
+        <a class="asset-card" href="progress_bar/progress_bar.html">
+          <span class="asset-index">03</span>
+          <span class="asset-kicker">Status</span>
+          <strong>Progress Bar</strong>
+          <span class="asset-description">Status display pared down to the essentials.</span>
+          <div class="asset-preview asset-preview-progress" aria-hidden="true">
+            <span class="asset-progress-label"></span>
+            <span class="asset-progress-track"><span class="asset-progress-fill"></span></span>
+          </div>
+        </a>
+        <a class="asset-card" href="stat_card/stat_card.html">
+          <span class="asset-index">04</span>
+          <span class="asset-kicker">Metric</span>
+          <strong>Stat Card</strong>
+          <span class="asset-description">Single-metric surface with sharp hierarchy.</span>
+          <div class="asset-preview asset-preview-stat" aria-hidden="true">
+            <span class="asset-stat-shell">
+              <i></i>
+              <b></b>
+              <em></em>
+            </span>
+          </div>
+        </a>
+        <a class="asset-card" href="sparkline_card/sparkline_card.html">
+          <span class="asset-index">05</span>
+          <span class="asset-kicker">Trend</span>
+          <strong>Sparkline Card</strong>
+          <span class="asset-description">Trend readout with minimal signal bars.</span>
+          <div class="asset-preview asset-preview-spark" aria-hidden="true">
+            <span style="--value: 34%"></span>
+            <span style="--value: 46%"></span>
+            <span style="--value: 40%"></span>
+            <span style="--value: 58%"></span>
+            <span style="--value: 63%"></span>
+            <span style="--value: 72%"></span>
+            <span style="--value: 88%"></span>
+          </div>
+        </a>
+        <a class="asset-card" href="bullet_chart/bullet_chart.html">
+          <span class="asset-index">06</span>
+          <span class="asset-kicker">Benchmark</span>
+          <strong>Bullet Chart</strong>
+          <span class="asset-description">Benchmark readout with target and range context.</span>
+          <div class="asset-preview asset-preview-bullet" aria-hidden="true">
+            <span class="asset-bullet-range asset-bullet-range-low"></span>
+            <span class="asset-bullet-range asset-bullet-range-mid"></span>
+            <span class="asset-bullet-range asset-bullet-range-high"></span>
+            <span class="asset-bullet-measure"></span>
+            <span class="asset-bullet-target"></span>
+          </div>
+        </a>
+        <a class="asset-card" href="timeline_steps/timeline_steps.html">
+          <span class="asset-index">07</span>
+          <span class="asset-kicker">Roadmap</span>
+          <strong>Timeline Steps</strong>
+          <span class="asset-description">Phase tracker reduced to line, point, and label.</span>
+          <div class="asset-preview asset-preview-timeline" aria-hidden="true">
+            <span class="asset-timeline-dot is-complete"></span>
+            <span class="asset-timeline-dot is-current"></span>
+            <span class="asset-timeline-dot"></span>
+            <span class="asset-timeline-dot"></span>
+          </div>
+        </a>
+        <a class="asset-card" href="leaderboard_card/leaderboard_card.html">
+          <span class="asset-index">08</span>
+          <span class="asset-kicker">Ranking</span>
+          <strong>Leaderboard Card</strong>
+          <span class="asset-description">Ranked performance list in a single quiet card.</span>
+          <div class="asset-preview asset-preview-leaderboard" aria-hidden="true">
+            <span class="asset-rank-row"><i></i><b></b><em></em></span>
+            <span class="asset-rank-row"><i></i><b></b><em></em></span>
+            <span class="asset-rank-row"><i></i><b></b><em></em></span>
+          </div>
+        </a>
+      </div>
     </section>
 
     <section class="system-band">
@@ -196,13 +319,29 @@
         </p>
       </div>
       <div class="portfolio-links">
-        <a href="CASE_STUDY.md">Case study narrative</a>
-        <a href="TOKENS.md">Token reference</a>
-        <a href="GOVERNANCE.md">Governance model</a>
-        <a href="QA.md">Release checklist</a>
+        <a href="CASE_STUDY.md">
+          <span class="portfolio-link-kicker">Narrative</span>
+          <strong>Case study</strong>
+          <span class="portfolio-link-copy">Project framing, before/after evolution, and why the system matters in a portfolio context.</span>
+        </a>
+        <a href="TOKENS.md">
+          <span class="portfolio-link-kicker">System</span>
+          <strong>Token reference</strong>
+          <span class="portfolio-link-copy">Palette, typography, radius, motion, and shell rules documented as a reusable contract.</span>
+        </a>
+        <a href="GOVERNANCE.md">
+          <span class="portfolio-link-kicker">Operations</span>
+          <strong>Governance model</strong>
+          <span class="portfolio-link-copy">Contribution, review, and release expectations positioned as part of the product quality story.</span>
+        </a>
+        <a href="QA.md">
+          <span class="portfolio-link-kicker">Validation</span>
+          <strong>Release checklist</strong>
+          <span class="portfolio-link-copy">Manual visual and deployment QA guidance for static-site publishing and browser verification.</span>
+        </a>
       </div>
     </section>
   </main>
-  <script src="theme.js?v=20260323a"></script>
+  <script src="theme.js?v=20260323c"></script>
 </body>
 </html>

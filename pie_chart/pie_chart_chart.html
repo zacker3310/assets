@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Transparent Pie Chart</title>
+  <title>Donut Chart Specimen | assets</title>
+  <meta
+    name="description"
+    content="Standalone donut chart specimen from the assets system for portfolio split and attainment summaries."
+  />
   <script>
     (function () {
       var key = "assets-theme";
@@ -22,35 +26,59 @@
       document.documentElement.dataset.theme = theme;
     })();
   </script>
-  <link rel="stylesheet" href="../theme.css?v=20260323a" />
-  <link rel="stylesheet" href="pie_chart_chart.css?v=20260323a" />
+  <link rel="stylesheet" href="../theme.css?v=20260323c" />
+  <link rel="stylesheet" href="pie_chart_chart.css?v=20260323c" />
 </head>
 <body>
-  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
-    <span class="theme-toggle-label">Theme</span>
-    <span class="theme-toggle-state">Light</span>
-    <span class="theme-toggle-switch" aria-hidden="true"></span>
-  </button>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="../index.html">
+        <span class="site-brand-mark">assets</span>
+        <span class="site-brand-copy">Editorial enterprise component guide</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../brand_guide.html">Brand guide</a>
+        <a href="../compositions.html">Compositions</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="theme-toggle-label">Theme</span>
+        <span class="theme-toggle-state">Light</span>
+        <span class="theme-toggle-switch" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
   <p id="pie-chart-summary" class="sr-only">Portfolio split donut chart with total target hit at 82 percent. Q1 is 40 percent, Q2 is 20 percent, Q3 is 25 percent, and Q4 is 15 percent.</p>
-  <main class="chart-wrapper" role="img" aria-labelledby="pie-chart-summary">
-    <div class="chart-card">
-      <div class="pie-shell">
-        <div class="pie">
-          <div class="pie-center">
-            <strong>82%</strong>
-            <span>Target</span>
+  <main class="specimen-shell">
+    <section class="specimen-intro">
+      <div>
+        <p class="specimen-kicker">Component Specimen</p>
+        <h1 class="specimen-title">Donut Chart</h1>
+      </div>
+      <p class="specimen-note">Compact circular summary for portfolio mix, split, and target-attainment communication.</p>
+    </section>
+    <section class="specimen-stage" role="img" aria-labelledby="pie-chart-summary">
+      <div class="chart-wrapper">
+        <div class="chart-card">
+          <div class="pie-shell">
+            <div class="pie">
+              <div class="pie-center">
+                <strong>82%</strong>
+                <span>Target</span>
+              </div>
+            </div>
+          </div>
+          <div class="legend">
+            <p class="eyebrow">Portfolio Split</p>
+            <div class="legend-row"><span class="swatch swatch-q1"></span><span>Q1</span><strong>40%</strong></div>
+            <div class="legend-row"><span class="swatch swatch-q2"></span><span>Q2</span><strong>20%</strong></div>
+            <div class="legend-row"><span class="swatch swatch-q3"></span><span>Q3</span><strong>25%</strong></div>
+            <div class="legend-row"><span class="swatch swatch-q4"></span><span>Q4</span><strong>15%</strong></div>
           </div>
         </div>
       </div>
-      <div class="legend">
-        <p class="eyebrow">Portfolio Split</p>
-        <div class="legend-row"><span class="swatch swatch-q1"></span><span>Q1</span><strong>40%</strong></div>
-        <div class="legend-row"><span class="swatch swatch-q2"></span><span>Q2</span><strong>20%</strong></div>
-        <div class="legend-row"><span class="swatch swatch-q3"></span><span>Q3</span><strong>25%</strong></div>
-        <div class="legend-row"><span class="swatch swatch-q4"></span><span>Q4</span><strong>15%</strong></div>
-      </div>
-    </div>
+    </section>
   </main>
-  <script src="../theme.js?v=20260323a"></script>
+  <script src="../theme.js?v=20260323c"></script>
 </body>
 </html>

@@ -26,30 +26,57 @@
       document.documentElement.dataset.theme = theme;
     })();
   </script>
-  <link rel="stylesheet" href="theme.css?v=20260323a" />
-  <link rel="stylesheet" href="brand_guide.css?v=20260323a" />
+  <link rel="stylesheet" href="theme.css?v=20260323c" />
+  <link rel="stylesheet" href="brand_guide.css?v=20260323c" />
 </head>
 <body>
-  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
-    <span class="theme-toggle-label">Theme</span>
-    <span class="theme-toggle-state">Light</span>
-    <span class="theme-toggle-switch" aria-hidden="true"></span>
-  </button>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="index.html">
+        <span class="site-brand-mark">assets</span>
+        <span class="site-brand-copy">Editorial enterprise component guide</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="brand_guide.html" aria-current="page">Brand guide</a>
+        <a href="compositions.html">Compositions</a>
+        <a href="CASE_STUDY.md">Case study</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="theme-toggle-label">Theme</span>
+        <span class="theme-toggle-state">Light</span>
+        <span class="theme-toggle-switch" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
   <main class="guide-shell">
     <section class="guide-hero">
-      <p class="eyebrow">Brand System</p>
-      <h1>Component guidance for a disciplined enterprise brand.</h1>
-      <p class="hero-copy">
-        This guide defines how to use the repository as a visual system: restrained color, direct hierarchy,
-        accessible interactions, and predictable deployment behavior.
-      </p>
-      <div class="hero-links">
-        <a href="index.html">Home</a>
-        <a href="README.md">Repository guide</a>
-        <a href="TOKENS.md">Token guide</a>
-        <a href="USAGE.md">Usage guidance</a>
-        <a href="GOVERNANCE.md">Governance</a>
-        <a href="compositions.html">Compositions</a>
+      <div class="guide-hero-layout">
+        <div>
+          <p class="eyebrow">Brand System</p>
+          <h1>Component guidance for a disciplined enterprise brand.</h1>
+          <p class="hero-copy">
+            This guide defines how to use the repository as a visual system: restrained color, direct hierarchy,
+            accessible interactions, and predictable deployment behavior.
+          </p>
+          <div class="hero-links">
+            <a href="index.html">Home</a>
+            <a href="README.md">Repository guide</a>
+            <a href="TOKENS.md">Token guide</a>
+            <a href="USAGE.md">Usage guidance</a>
+            <a href="GOVERNANCE.md">Governance</a>
+            <a href="compositions.html">Compositions</a>
+          </div>
+        </div>
+        <aside class="guide-summary" aria-label="Guide summary">
+          <p class="card-label">At a Glance</p>
+          <strong>One visual language, one operating model, one deploy story.</strong>
+          <div class="guide-summary-list">
+            <span>Editorial-enterprise tone with restrained red emphasis.</span>
+            <span>Shared tokens for surfaces, typography, motion, and shell behavior.</span>
+            <span>Governance, QA, and versioning treated as part of the product.</span>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -167,6 +194,6 @@
       </article>
     </section>
   </main>
-  <script src="theme.js?v=20260323a"></script>
+  <script src="theme.js?v=20260323c"></script>
 </body>
 </html>

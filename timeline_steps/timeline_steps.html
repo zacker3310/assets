@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Timeline Steps</title>
+  <title>Timeline Steps Specimen | assets</title>
+  <meta
+    name="description"
+    content="Standalone timeline steps specimen from the assets system for release plans and milestone tracking."
+  />
   <script>
     (function () {
       var key = "assets-theme";
@@ -22,49 +26,71 @@
       document.documentElement.dataset.theme = theme;
     })();
   </script>
-  <link rel="stylesheet" href="../theme.css?v=20260323a" />
-  <link rel="stylesheet" href="timeline_steps.css?v=20260323a" />
+  <link rel="stylesheet" href="../theme.css?v=20260323c" />
+  <link rel="stylesheet" href="timeline_steps.css?v=20260323c" />
 </head>
 <body>
-  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
-    <span class="theme-toggle-label">Theme</span>
-    <span class="theme-toggle-state">Light</span>
-    <span class="theme-toggle-switch" aria-hidden="true"></span>
-  </button>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="../index.html">
+        <span class="site-brand-mark">assets</span>
+        <span class="site-brand-copy">Editorial enterprise component guide</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../brand_guide.html">Brand guide</a>
+        <a href="../compositions.html">Compositions</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="theme-toggle-label">Theme</span>
+        <span class="theme-toggle-state">Light</span>
+        <span class="theme-toggle-switch" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
   <p id="timeline-summary" class="sr-only">Release plan timeline with Design complete, Build in progress, QA next, and Ship scheduled for April.</p>
-  <main aria-labelledby="timeline-summary">
-  <section class="timeline-card">
-    <div class="header-row">
+  <main class="specimen-shell">
+    <section class="specimen-intro">
       <div>
-        <p class="eyebrow">Timeline</p>
-        <h1>Release plan</h1>
+        <p class="specimen-kicker">Component Specimen</p>
+        <h1 class="specimen-title">Timeline Steps</h1>
       </div>
-      <span class="status-pill">On Track</span>
-    </div>
-    <div class="timeline">
-      <article class="step is-complete">
-        <span class="dot"></span>
-        <strong>Design</strong>
-        <span class="meta">Complete</span>
-      </article>
-      <article class="step is-current">
-        <span class="dot"></span>
-        <strong>Build</strong>
-        <span class="meta">In progress</span>
-      </article>
-      <article class="step">
-        <span class="dot"></span>
-        <strong>QA</strong>
-        <span class="meta">Next</span>
-      </article>
-      <article class="step">
-        <span class="dot"></span>
-        <strong>Ship</strong>
-        <span class="meta">April</span>
-      </article>
-    </div>
-  </section>
+      <p class="specimen-note">Milestone object for release plans, transformation phases, and rollout readiness tracking.</p>
+    </section>
+    <section class="specimen-stage" aria-labelledby="timeline-summary">
+      <section class="timeline-card">
+        <div class="header-row">
+          <div>
+            <p class="eyebrow">Timeline</p>
+            <h1>Release plan</h1>
+          </div>
+          <span class="status-pill">On Track</span>
+        </div>
+        <div class="timeline">
+          <article class="step is-complete">
+            <span class="dot"></span>
+            <strong>Design</strong>
+            <span class="meta">Complete</span>
+          </article>
+          <article class="step is-current">
+            <span class="dot"></span>
+            <strong>Build</strong>
+            <span class="meta">In progress</span>
+          </article>
+          <article class="step">
+            <span class="dot"></span>
+            <strong>QA</strong>
+            <span class="meta">Next</span>
+          </article>
+          <article class="step">
+            <span class="dot"></span>
+            <strong>Ship</strong>
+            <span class="meta">April</span>
+          </article>
+        </div>
+      </section>
+    </section>
   </main>
-  <script src="../theme.js?v=20260323a"></script>
+  <script src="../theme.js?v=20260323c"></script>
 </body>
 </html>

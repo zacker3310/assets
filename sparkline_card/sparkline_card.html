@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sparkline Card</title>
+  <title>Sparkline Card Specimen | assets</title>
+  <meta
+    name="description"
+    content="Standalone sparkline card specimen from the assets system for trend callouts and lightweight telemetry summaries."
+  />
   <script>
     (function () {
       var key = "assets-theme";
@@ -22,37 +26,59 @@
       document.documentElement.dataset.theme = theme;
     })();
   </script>
-  <link rel="stylesheet" href="../theme.css?v=20260323a" />
-  <link rel="stylesheet" href="sparkline_card.css?v=20260323a" />
+  <link rel="stylesheet" href="../theme.css?v=20260323c" />
+  <link rel="stylesheet" href="sparkline_card.css?v=20260323c" />
 </head>
 <body>
-  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
-    <span class="theme-toggle-label">Theme</span>
-    <span class="theme-toggle-state">Light</span>
-    <span class="theme-toggle-switch" aria-hidden="true"></span>
-  </button>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="../index.html">
+        <span class="site-brand-mark">assets</span>
+        <span class="site-brand-copy">Editorial enterprise component guide</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../brand_guide.html">Brand guide</a>
+        <a href="../compositions.html">Compositions</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="theme-toggle-label">Theme</span>
+        <span class="theme-toggle-state">Light</span>
+        <span class="theme-toggle-switch" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
   <p id="sparkline-summary" class="sr-only">Activity sparkline card showing 18.6 thousand and an increase of 8 percent with a steady upward trend across seven bars.</p>
-  <main aria-labelledby="sparkline-summary">
-  <article class="spark-card">
-    <div class="copy-row">
+  <main class="specimen-shell">
+    <section class="specimen-intro">
       <div>
-        <p class="eyebrow">Activity</p>
-        <h1>18.6k</h1>
+        <p class="specimen-kicker">Component Specimen</p>
+        <h1 class="specimen-title">Sparkline Card</h1>
       </div>
-      <span class="trend">+8%</span>
-    </div>
-    <div class="sparkline" aria-hidden="true">
-      <span style="--value: 34%"></span>
-      <span style="--value: 46%"></span>
-      <span style="--value: 40%"></span>
-      <span style="--value: 58%"></span>
-      <span style="--value: 63%"></span>
-      <span style="--value: 72%"></span>
-      <span style="--value: 88%"></span>
-    </div>
-    <p class="caption">Engagement rose steadily after the refresh.</p>
-  </article>
+      <p class="specimen-note">Trend object for lightweight telemetry, momentum signals, and quick activity readouts.</p>
+    </section>
+    <section class="specimen-stage" aria-labelledby="sparkline-summary">
+      <article class="spark-card">
+        <div class="copy-row">
+          <div>
+            <p class="eyebrow">Activity</p>
+            <h1>18.6k</h1>
+          </div>
+          <span class="trend">+8%</span>
+        </div>
+        <div class="sparkline" aria-hidden="true">
+          <span style="--value: 34%"></span>
+          <span style="--value: 46%"></span>
+          <span style="--value: 40%"></span>
+          <span style="--value: 58%"></span>
+          <span style="--value: 63%"></span>
+          <span style="--value: 72%"></span>
+          <span style="--value: 88%"></span>
+        </div>
+        <p class="caption">Engagement rose steadily after the refresh.</p>
+      </article>
+    </section>
   </main>
-  <script src="../theme.js?v=20260323a"></script>
+  <script src="../theme.js?v=20260323c"></script>
 </body>
 </html>

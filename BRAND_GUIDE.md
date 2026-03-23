@@ -15,6 +15,7 @@ The system should feel credible in three ways at once:
 ## Brand Position
 
 - Quiet, formal, and deliberate
+- Editorial-enterprise rather than generic dashboard SaaS
 - Monochrome-first with controlled red emphasis
 - High information density without decorative clutter
 - Suitable for investor relations, executive reporting, internal dashboards, and lightweight product surfaces
@@ -38,8 +39,10 @@ The system should feel credible in three ways at once:
 ## Approved Expressions
 
 - restrained monochrome surfaces with red used as a signal
-- typography-led hierarchy with limited decorative treatment
+- typography-led hierarchy with serif display moments and sans-serif interface language
 - calm spacing and low-radius geometry
+- premium site chrome with slim navigation, quiet motion, and stronger section framing
+- specimen-style standalone component pages that feel curated, not discarded previews
 - layouts that prioritize scan speed for leadership and reporting audiences
 
 ## Avoid

@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Horizontal Bar Chart</title>
+  <title>Bar Chart Specimen | assets</title>
+  <meta
+    name="description"
+    content="Standalone bar chart specimen from the assets system for compact comparison and quarterly distribution reads."
+  />
   <script>
     (function () {
       var key = "assets-theme";
@@ -22,46 +26,70 @@
       document.documentElement.dataset.theme = theme;
     })();
   </script>
-  <link rel="stylesheet" href="../theme.css?v=20260323a" />
-  <link rel="stylesheet" href="bar_chart_chart.css?v=20260323a" />
+  <link rel="stylesheet" href="../theme.css?v=20260323c" />
+  <link rel="stylesheet" href="bar_chart_chart.css?v=20260323c" />
 </head>
 <body>
-  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
-    <span class="theme-toggle-label">Theme</span>
-    <span class="theme-toggle-state">Light</span>
-    <span class="theme-toggle-switch" aria-hidden="true"></span>
-  </button>
-  <p id="bar-chart-summary" class="sr-only">Revenue distribution by quarter: Q1 40 percent, Q2 20 percent, Q3 25 percent, Q4 15 percent.</p>
-  <main class="chart-wrapper" role="img" aria-labelledby="bar-chart-summary">
-    <div class="chart-card">
-      <div class="chart-header">
-        <p class="eyebrow">Quarterly Readout</p>
-        <strong>Revenue distribution</strong>
-      </div>
-      <div class="bar-group">
-        <div class="bar-row">
-          <span class="bar-label">Q1</span>
-          <div class="bar-track"><div class="bar bar-q1"></div></div>
-          <span class="bar-value">40%</span>
-        </div>
-        <div class="bar-row">
-          <span class="bar-label">Q2</span>
-          <div class="bar-track"><div class="bar bar-q2"></div></div>
-          <span class="bar-value">20%</span>
-        </div>
-        <div class="bar-row">
-          <span class="bar-label">Q3</span>
-          <div class="bar-track"><div class="bar bar-q3"></div></div>
-          <span class="bar-value">25%</span>
-        </div>
-        <div class="bar-row">
-          <span class="bar-label">Q4</span>
-          <div class="bar-track"><div class="bar bar-q4"></div></div>
-          <span class="bar-value">15%</span>
-        </div>
-      </div>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="../index.html">
+        <span class="site-brand-mark">assets</span>
+        <span class="site-brand-copy">Editorial enterprise component guide</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../brand_guide.html">Brand guide</a>
+        <a href="../compositions.html">Compositions</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="theme-toggle-label">Theme</span>
+        <span class="theme-toggle-state">Light</span>
+        <span class="theme-toggle-switch" aria-hidden="true"></span>
+      </button>
     </div>
+  </header>
+  <p id="bar-chart-summary" class="sr-only">Revenue distribution by quarter: Q1 40 percent, Q2 20 percent, Q3 25 percent, Q4 15 percent.</p>
+  <main class="specimen-shell">
+    <section class="specimen-intro">
+      <div>
+        <p class="specimen-kicker">Component Specimen</p>
+        <h1 class="specimen-title">Bar Chart</h1>
+      </div>
+      <p class="specimen-note">Compact comparison chart for quarterly distribution and performance mix reads.</p>
+    </section>
+    <section class="specimen-stage" role="img" aria-labelledby="bar-chart-summary">
+      <div class="chart-wrapper">
+        <div class="chart-card">
+          <div class="chart-header">
+            <p class="eyebrow">Quarterly Readout</p>
+            <strong>Revenue distribution</strong>
+          </div>
+          <div class="bar-group">
+            <div class="bar-row">
+              <span class="bar-label">Q1</span>
+              <div class="bar-track"><div class="bar bar-q1"></div></div>
+              <span class="bar-value">40%</span>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Q2</span>
+              <div class="bar-track"><div class="bar bar-q2"></div></div>
+              <span class="bar-value">20%</span>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Q3</span>
+              <div class="bar-track"><div class="bar bar-q3"></div></div>
+              <span class="bar-value">25%</span>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Q4</span>
+              <div class="bar-track"><div class="bar bar-q4"></div></div>
+              <span class="bar-value">15%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <script src="../theme.js?v=20260323a"></script>
+  <script src="../theme.js?v=20260323c"></script>
 </body>
 </html>

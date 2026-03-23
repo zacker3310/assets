@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stat Card</title>
+  <title>Stat Card Specimen | assets</title>
+  <meta
+    name="description"
+    content="Standalone stat card specimen from the assets system for executive KPI and summary reporting."
+  />
   <script>
     (function () {
       var key = "assets-theme";
@@ -22,30 +26,52 @@
       document.documentElement.dataset.theme = theme;
     })();
   </script>
-  <link rel="stylesheet" href="../theme.css?v=20260323a" />
-  <link rel="stylesheet" href="stat_card.css?v=20260323a" />
+  <link rel="stylesheet" href="../theme.css?v=20260323c" />
+  <link rel="stylesheet" href="stat_card.css?v=20260323c" />
 </head>
 <body>
-  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
-    <span class="theme-toggle-label">Theme</span>
-    <span class="theme-toggle-state">Light</span>
-    <span class="theme-toggle-switch" aria-hidden="true"></span>
-  </button>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="../index.html">
+        <span class="site-brand-mark">assets</span>
+        <span class="site-brand-copy">Editorial enterprise component guide</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../brand_guide.html">Brand guide</a>
+        <a href="../compositions.html">Compositions</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="theme-toggle-label">Theme</span>
+        <span class="theme-toggle-state">Light</span>
+        <span class="theme-toggle-switch" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
   <p id="stat-card-summary" class="sr-only">Revenue stat card showing 2.84 million dollars, up 12.4 percent, with 83 new accounts and 94 percent retention.</p>
-  <main aria-labelledby="stat-card-summary">
-  <article class="stat-card">
-    <p class="eyebrow">Revenue</p>
-    <div class="stat-row">
-      <h1>$2.84M</h1>
-      <span class="delta">+12.4%</span>
-    </div>
-    <p class="context">Quarter-over-quarter growth driven by enterprise renewals.</p>
-    <div class="footer-row">
-      <span>83 new accounts</span>
-      <span>94% retention</span>
-    </div>
-  </article>
+  <main class="specimen-shell">
+    <section class="specimen-intro">
+      <div>
+        <p class="specimen-kicker">Component Specimen</p>
+        <h1 class="specimen-title">Stat Card</h1>
+      </div>
+      <p class="specimen-note">Executive KPI object with a deliberate dark inversion for premium summary surfaces.</p>
+    </section>
+    <section class="specimen-stage" aria-labelledby="stat-card-summary">
+      <article class="stat-card">
+        <p class="eyebrow">Revenue</p>
+        <div class="stat-row">
+          <h1>$2.84M</h1>
+          <span class="delta">+12.4%</span>
+        </div>
+        <p class="context">Quarter-over-quarter growth driven by enterprise renewals.</p>
+        <div class="footer-row">
+          <span>83 new accounts</span>
+          <span>94% retention</span>
+        </div>
+      </article>
+    </section>
   </main>
-  <script src="../theme.js?v=20260323a"></script>
+  <script src="../theme.js?v=20260323c"></script>
 </body>
 </html>

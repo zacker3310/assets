@@ -1,43 +1,23 @@
 :root {
   --card-width: 3.1in;
-  --card-height: 1.35in;
+  --card-height: 1.4in;
   --text-strong: var(--theme-text);
   --text-muted: var(--theme-text-muted);
-  --track-bg: #dfdfdb;
-  --track-fill-start: #141414;
-  --track-fill-end: #ba1f2e;
-  --track-rest: #cfcfca;
-  --card-bg: var(--theme-surface);
-  --card-border: var(--theme-border);
-  --card-shadow: 0 22px 46px rgba(0, 0, 0, 0.08);
+  --track-bg: var(--theme-neutral-muted);
+  --track-fill-start: var(--theme-neutral-strong);
+  --track-fill-end: var(--theme-accent);
+  --track-rest: rgba(0, 0, 0, 0.08);
+  --card-bg: linear-gradient(180deg, var(--theme-surface-strong) 0%, var(--theme-surface) 100%);
+  --card-border: var(--theme-border-strong);
   --accent: var(--theme-accent);
 }
 
 html[data-theme="dark"] {
-  --text-strong: var(--theme-text);
-  --text-muted: var(--theme-text-muted);
-  --track-bg: #1c1c1c;
-  --track-fill-start: #f2f2ef;
-  --track-fill-end: #ff5c6d;
-  --track-rest: #303030;
-  --card-bg: var(--theme-surface);
-  --card-border: var(--theme-border);
-  --card-shadow: 0 24px 50px rgba(0, 0, 0, 0.34);
-  --accent: var(--theme-accent);
-}
-
-* {
-  box-sizing: border-box;
+  --track-rest: rgba(255, 255, 255, 0.08);
 }
 
 body {
   margin: 0;
-  padding: 0.7in 0.24in 0.24in;
-  background: var(--theme-page-bg);
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .bounding-box {
@@ -49,10 +29,10 @@ body {
   width: 100%;
   min-height: 100%;
   padding: 0.22in;
-  border-radius: 0.12in;
+  border-radius: var(--theme-radius-md);
   border: 1px solid var(--card-border);
   background: var(--card-bg);
-  box-shadow: none;
+  box-shadow: var(--theme-shadow-xs);
 }
 
 .progress-copy {
@@ -95,7 +75,7 @@ body {
   height: 0.1in;
   margin-top: 0.22in;
   display: flex;
-  border-radius: 999px;
+  border-radius: var(--theme-radius-pill);
   overflow: hidden;
   background: var(--track-bg);
 }
@@ -113,6 +93,6 @@ body {
 .progress-gloss {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
   pointer-events: none;
 }

@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bullet Chart</title>
+  <title>Bullet Chart Specimen | assets</title>
+  <meta
+    name="description"
+    content="Standalone bullet chart specimen from the assets system for target attainment and benchmark communication."
+  />
   <script>
     (function () {
       var key = "assets-theme";
@@ -22,40 +26,62 @@
       document.documentElement.dataset.theme = theme;
     })();
   </script>
-  <link rel="stylesheet" href="../theme.css?v=20260323a" />
-  <link rel="stylesheet" href="bullet_chart.css?v=20260323a" />
+  <link rel="stylesheet" href="../theme.css?v=20260323c" />
+  <link rel="stylesheet" href="bullet_chart.css?v=20260323c" />
 </head>
 <body>
-  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
-    <span class="theme-toggle-label">Theme</span>
-    <span class="theme-toggle-state">Light</span>
-    <span class="theme-toggle-switch" aria-hidden="true"></span>
-  </button>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="../index.html">
+        <span class="site-brand-mark">assets</span>
+        <span class="site-brand-copy">Editorial enterprise component guide</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../brand_guide.html">Brand guide</a>
+        <a href="../compositions.html">Compositions</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="theme-toggle-label">Theme</span>
+        <span class="theme-toggle-state">Light</span>
+        <span class="theme-toggle-switch" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
   <p id="bullet-chart-summary" class="sr-only">Pipeline coverage bullet chart showing 92 percent against a target of 100 percent on a scale up to 120 percent.</p>
-  <main aria-labelledby="bullet-chart-summary">
-  <article class="bullet-card">
-    <div class="card-head">
+  <main class="specimen-shell">
+    <section class="specimen-intro">
       <div>
-        <p class="eyebrow">Target Readout</p>
-        <h1>Pipeline Coverage</h1>
+        <p class="specimen-kicker">Component Specimen</p>
+        <h1 class="specimen-title">Bullet Chart</h1>
       </div>
-      <span class="headline">92%</span>
-    </div>
-    <div class="bullet-scale" aria-hidden="true">
-      <span class="range range-low"></span>
-      <span class="range range-mid"></span>
-      <span class="range range-high"></span>
-      <span class="measure"></span>
-      <span class="target"></span>
-    </div>
-    <div class="scale-labels">
-      <span>0%</span>
-      <span>Target 100%</span>
-      <span>120%</span>
-    </div>
-    <p class="footnote">Coverage remains just below target while staying ahead of last quarter.</p>
-  </article>
+      <p class="specimen-note">Benchmark object for actual-versus-target communication in compact reporting layouts.</p>
+    </section>
+    <section class="specimen-stage" aria-labelledby="bullet-chart-summary">
+      <article class="bullet-card">
+        <div class="card-head">
+          <div>
+            <p class="eyebrow">Target Readout</p>
+            <h1>Pipeline Coverage</h1>
+          </div>
+          <span class="headline">92%</span>
+        </div>
+        <div class="bullet-scale" aria-hidden="true">
+          <span class="range range-low"></span>
+          <span class="range range-mid"></span>
+          <span class="range range-high"></span>
+          <span class="measure"></span>
+          <span class="target"></span>
+        </div>
+        <div class="scale-labels">
+          <span>0%</span>
+          <span>Target 100%</span>
+          <span>120%</span>
+        </div>
+        <p class="footnote">Coverage remains just below target while staying ahead of last quarter.</p>
+      </article>
+    </section>
   </main>
-  <script src="../theme.js?v=20260323a"></script>
+  <script src="../theme.js?v=20260323c"></script>
 </body>
 </html>

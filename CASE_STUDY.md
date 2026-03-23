@@ -34,6 +34,15 @@ The system was expanded across four layers:
 3. Governance: documentation for tokens, versioning, QA, contribution, and usage
 4. Compositions: portfolio-grade examples showing how the system assembles into business outputs
 
+## Design Intervention
+
+The most important shift was not simply adding more pages. It was changing the repo from a collection of components into a more credible product-facing system.
+
+- The visual direction moved toward an editorial-enterprise tone: warmer light surfaces, restrained red accents, stronger typography, and quieter but more intentional hierarchy.
+- The home page was redesigned to lead with system credibility and flagship compositions instead of treating everything as a flat component catalog.
+- Major guide and showcase pages now share a clearer shell, navigation language, and layout rhythm so the repository feels curated rather than accumulated.
+- Standalone asset pages were reframed as specimen pages, which makes them read like deliberate design objects instead of isolated snippets.
+
 ## After
 
 The repository now behaves more like an enterprise-facing branded component guide:
@@ -52,6 +61,7 @@ The result is not just a UI set. It is a small operating model for how static br
 - Accessibility-conscious standalone assets
 - A documented static deployment model suitable for GitHub Pages
 - Reference compositions such as `executive_dashboard.html`, `investor_update.html`, and `operating_review.html`
+- A stronger portfolio narrative that shows system thinking, not only interface styling
 
 ## Deliverables
 
@@ -70,6 +80,16 @@ The strongest portfolio value comes from the combination of artifacts, not any s
 - docs show maintenance and governance thinking
 - theme/versioning work shows operational awareness
 - accessibility support shows product maturity
+
+## Why It Reads As Real
+
+The repository is more persuasive because it answers the questions a real design or frontend lead would ask:
+
+- Can this system express a point of view visually, not just functionally?
+- Do the components feel related when assembled into more complex pages?
+- Is there an explicit token model instead of ad hoc local styling?
+- Are contribution, QA, and publishing concerns documented?
+- Does the work hold up as a portfolio case study, not only a code exercise?
 
 ## What This Demonstrates
 

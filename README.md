@@ -46,11 +46,12 @@ This repo is meant to read as more than an asset dump. It combines:
 
 ## Shared Theme System
 
-- `theme.css` contains shared light/dark-mode variables and the top-right rocker toggle styles.
+- `theme.css` contains the shared design-system contract: light/dark variables, typography families, radius/shadow scales, site shell/header styles, specimen-stage styles, and the theme toggle.
 - `theme.js` applies the selected theme, respects system preference by default, and persists user choice in `localStorage`.
-- Every HTML page includes the same fixed toggle in the top-right corner.
+- Every HTML page includes the same theme toggle, now integrated into the shared site/specimen shell.
 - Shared surface, border, text, and accent tokens also live in `theme.css` so component CSS can align around one visual system.
 - New semantic tokens such as muted surfaces, soft accent fills, and neutral structural values support more consistent composition pages.
+- The redesign also introduces a serif display layer for major showcase headings while keeping UI and component interiors on the sans-serif system stack.
 
 ## Repo Layout
 
@@ -111,7 +112,7 @@ assets/
 
 1. Open `index.html` to browse the component gallery.
 2. Open `compositions.html` and `brand_guide.html` to review the system layer.
-3. Open a component HTML file to inspect it in isolation.
+3. Open a component HTML file to inspect it in its specimen shell.
 4. Edit the page- or component-local CSS first, then update `theme.css` only if the change should apply across the whole library.
 
 ## Publishing Notes

@@ -36,12 +36,12 @@ body {
 .page-shell {
   width: min(11in, calc(100vw - 2rem));
   margin: 0 auto;
-  padding: 1.28in 0 1in;
+  padding: 1.45in 0 1in;
 }
 
 .hero {
-  max-width: 7.2in;
-  margin-bottom: 0.82in;
+  max-width: 6.6in;
+  margin-bottom: 0.95in;
 }
 
 .eyebrow {
@@ -54,35 +54,35 @@ body {
 
 .hero h1 {
   margin: 0;
-  max-width: 7in;
-  font-size: clamp(2.2rem, 6vw, 4.4rem);
-  line-height: 0.92;
-  letter-spacing: -0.06em;
+  max-width: 5.9in;
+  font-size: clamp(2.3rem, 6vw, 4.8rem);
+  line-height: 0.88;
+  letter-spacing: -0.075em;
   font-weight: 600;
 }
 
 .hero-copy {
-  max-width: 5.6in;
-  margin: 0.24in 0 0;
-  font-size: 0.18in;
-  line-height: 1.6;
+  max-width: 4.8in;
+  margin: 0.28in 0 0;
+  font-size: 0.16in;
+  line-height: 1.7;
   color: var(--text-muted);
 }
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(2.45in, 1fr));
-  gap: 0.18in;
+  gap: 0.12in;
 }
 
 .asset-card {
   display: grid;
   gap: 0.1in;
-  min-height: 2.02in;
-  padding: 0.24in;
+  min-height: 1.92in;
+  padding: 0.22in;
   text-decoration: none;
   color: inherit;
-  border-radius: 0.16in;
+  border-radius: 0.12in;
   border: 1px solid var(--panel-border);
   background: var(--panel-bg);
   box-shadow: var(--shadow);
@@ -90,8 +90,8 @@ body {
 }
 
 .asset-card:hover {
-  transform: translateY(-0.03in);
-  border-color: rgba(187, 30, 45, 0.32);
+  transform: translateY(-0.02in);
+  border-color: rgba(187, 30, 45, 0.26);
   background: linear-gradient(180deg, var(--panel-bg) 0%, var(--accent-soft) 100%);
 }
 
@@ -107,16 +107,16 @@ html[data-theme="dark"] .asset-card:hover {
 }
 
 .asset-card strong {
-  max-width: 2.2in;
-  font-size: 0.31in;
-  line-height: 1;
+  max-width: 2in;
+  font-size: 0.28in;
+  line-height: 0.98;
   font-weight: 600;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.05em;
 }
 
 .asset-card span:last-child {
-  max-width: 2.25in;
-  font-size: 0.15in;
-  line-height: 1.55;
+  max-width: 2.1in;
+  font-size: 0.135in;
+  line-height: 1.6;
   color: var(--text-muted);
 }

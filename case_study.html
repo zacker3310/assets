@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study | assets</title>
+  <meta
+    name="description"
+    content="How a set of standalone HTML/CSS reporting components became a governed static design system."
+  />
+  <script>
+    (function () {
+      var key = "assets-theme";
+      var theme = null;
+
+      try {
+        theme = localStorage.getItem(key);
+      } catch (error) {}
+
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      }
+
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="theme.css?v=20260323f" />
+  <link rel="stylesheet" href="case_study.css?v=20260323f" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="index.html">
+        <span class="site-brand-mark">assets</span>
+        <span class="site-brand-copy">Static reporting component library</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="brand_guide.html">Brand guide</a>
+        <a href="case_study.html" aria-current="page">Case study</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="theme-toggle-label">Theme</span>
+        <span class="theme-toggle-state">Light</span>
+        <span class="theme-toggle-switch" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+  <main class="case-shell">
+    <section class="case-hero">
+      <p class="eyebrow">Case Study</p>
+      <h1>From loose snippets to a governed component system.</h1>
+      <p class="case-lede">
+        This project started as a handful of standalone HTML/CSS charts and cards. It grew into a
+        themed, documented, and composable reporting library with light/dark mode, print-aware sizing,
+        and real example layouts.
+      </p>
+    </section>
+
+    <section class="case-timeline">
+      <article class="case-phase">
+        <span class="phase-label">Before</span>
+        <h2>Isolated snippets, no shared language.</h2>
+        <ul>
+          <li>Individual HTML/CSS files with no shared tokens</li>
+          <li>Inconsistent sizing, color, and typography</li>
+          <li>No theme support, no documentation</li>
+          <li>Useful as raw material, not presentable as a system</li>
+        </ul>
+      </article>
+      <article class="case-phase">
+        <span class="phase-label">Approach</span>
+        <h2>Build the missing layers around the components.</h2>
+        <ul>
+          <li>Extract shared design tokens into <code>theme.css</code></li>
+          <li>Add persistent light/dark mode across every page</li>
+          <li>Use print-aware inch-based sizing for component cards</li>
+          <li>Create composition pages that assemble components into realistic layouts</li>
+          <li>Document the token model, brand rules, and contribution expectations</li>
+        </ul>
+      </article>
+      <article class="case-phase">
+        <span class="phase-label">After</span>
+        <h2>A library that works like a product.</h2>
+        <ul>
+          <li>8 standalone components with consistent tokens and accessibility</li>
+          <li>3 composition pages showing real reporting scenarios</li>
+          <li>Shared theme with 40+ CSS custom properties</li>
+          <li>Zero dependencies, opens directly in any browser</li>
+          <li>Deployed on GitHub Pages with cache-busted versioning</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="case-skills">
+      <h2>What this demonstrates</h2>
+      <div class="skills-grid">
+        <div>
+          <strong>Component design</strong>
+          <span>Print-aware, accessible HTML/CSS cards built for reuse.</span>
+        </div>
+        <div>
+          <strong>Token architecture</strong>
+          <span>Shared CSS custom properties governing color, type, spacing, and motion.</span>
+        </div>
+        <div>
+          <strong>Theming</strong>
+          <span>Full light/dark mode with system preference detection and persistence.</span>
+        </div>
+        <div>
+          <strong>Composition</strong>
+          <span>Components assembled into executive, investor, and operating layouts.</span>
+        </div>
+        <div>
+          <strong>Static deployment</strong>
+          <span>GitHub Pages with versioned asset references and no build step.</span>
+        </div>
+        <div>
+          <strong>Accessibility</strong>
+          <span>Screen-reader summaries, focus states, and reduced-motion support.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="theme.js?v=20260323f"></script>
+</body>
+</html>

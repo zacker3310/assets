@@ -6,7 +6,7 @@
   <title>Brand Guide | assets</title>
   <meta
     name="description"
-    content="System-level guidance for the assets repository: brand principles, token behavior, accessibility, and governance."
+    content="Visual reference for the assets design system: color tokens, type scale, spacing, radius, and component patterns."
   />
   <script>
     (function () {
@@ -34,13 +34,12 @@
     <div class="site-header-inner">
       <a class="site-brand" href="index.html">
         <span class="site-brand-mark">assets</span>
-        <span class="site-brand-copy">Editorial enterprise component guide</span>
+        <span class="site-brand-copy">Static reporting component library</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="brand_guide.html" aria-current="page">Brand guide</a>
-        <a href="compositions.html">Compositions</a>
-        <a href="CASE_STUDY.md">Case study</a>
+        <a href="case_study.html">Case study</a>
       </nav>
       <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
         <span class="theme-toggle-label">Theme</span>
@@ -51,147 +50,157 @@
   </header>
   <main class="guide-shell">
     <section class="guide-hero">
-      <div class="guide-hero-layout">
-        <div>
-          <p class="eyebrow">Brand System</p>
-          <h1>Component guidance for a disciplined enterprise brand.</h1>
-          <p class="hero-copy">
-            This guide defines how to use the repository as a visual system: restrained color, direct hierarchy,
-            accessible interactions, and predictable deployment behavior.
-          </p>
-          <div class="hero-links">
-            <a href="index.html">Home</a>
-            <a href="README.md">Repository guide</a>
-            <a href="TOKENS.md">Token guide</a>
-            <a href="USAGE.md">Usage guidance</a>
-            <a href="GOVERNANCE.md">Governance</a>
-            <a href="compositions.html">Compositions</a>
-          </div>
+      <p class="eyebrow">Brand Guide</p>
+      <h1>Design tokens and visual rules.</h1>
+      <p class="hero-copy">
+        Everything on this page renders from the actual CSS custom properties in <code>theme.css</code>.
+        Toggle the theme to see both modes.
+      </p>
+    </section>
+
+    <section class="token-section">
+      <h2>Color</h2>
+      <div class="swatch-grid">
+        <div class="swatch-card">
+          <div class="swatch-well" style="background: var(--theme-text)"></div>
+          <span class="swatch-name">--theme-text</span>
         </div>
-        <aside class="guide-summary" aria-label="Guide summary">
-          <p class="card-label">At a Glance</p>
-          <strong>One visual language, one operating model, one deploy story.</strong>
-          <div class="guide-summary-list">
-            <span>Editorial-enterprise tone with restrained red emphasis.</span>
-            <span>Shared tokens for surfaces, typography, motion, and shell behavior.</span>
-            <span>Governance, QA, and versioning treated as part of the product.</span>
-          </div>
-        </aside>
+        <div class="swatch-card">
+          <div class="swatch-well" style="background: var(--theme-text-muted)"></div>
+          <span class="swatch-name">--theme-text-muted</span>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-well" style="background: var(--theme-text-soft)"></div>
+          <span class="swatch-name">--theme-text-soft</span>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-well" style="background: var(--theme-accent)"></div>
+          <span class="swatch-name">--theme-accent</span>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-well" style="background: var(--theme-accent-strong)"></div>
+          <span class="swatch-name">--theme-accent-strong</span>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch-well" style="background: var(--theme-neutral-strong)"></div>
+          <span class="swatch-name">--theme-neutral-strong</span>
+        </div>
       </div>
     </section>
 
-    <section class="guide-grid">
-      <article class="guide-card">
-        <p class="card-label">01 Principles</p>
-        <h2>Reduce until the signal is unmistakable.</h2>
-        <ul>
-          <li>Use a small number of surfaces, rules, and emphasis states.</li>
-          <li>Prefer typography and spacing over decoration.</li>
-          <li>Use red only as a deliberate signal, not ambient color.</li>
-        </ul>
-      </article>
-
-      <article class="guide-card">
-        <p class="card-label">02 Tokens</p>
-        <h2>One visual language across all components.</h2>
-        <ul>
-          <li>Shared surface, border, text, and accent tokens live in `theme.css`.</li>
-          <li>Component CSS should extend shared tokens, not re-invent the palette.</li>
-          <li>Cache-busted shared assets must remain version-aligned across every page.</li>
-        </ul>
-      </article>
-
-      <article class="guide-card">
-        <p class="card-label">03 Accessibility</p>
-        <h2>Data must stay understandable without visual guesswork.</h2>
-        <ul>
-          <li>Standalone assets include hidden summary text for screen readers.</li>
-          <li>Focus states must remain visible on navigation and theme controls.</li>
-          <li>Reduced motion preferences should disable non-essential transitions.</li>
-        </ul>
-      </article>
-
-      <article class="guide-card">
-        <p class="card-label">04 Governance</p>
-        <h2>Operational discipline is part of the brand.</h2>
-        <ul>
-          <li>Update `VERSIONING.md` rules together with any deploy-affecting asset changes.</li>
-          <li>Run the checklist in `QA.md` before trusting a Pages deployment.</li>
-          <li>Keep docs, gallery, and component inventory in sync.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="spec-band">
-      <div class="spec-block">
-        <p class="spec-label">Color Behavior</p>
-        <strong>Monochrome base</strong>
-        <span>Black, off-white, graphite, and disciplined red accents.</span>
-      </div>
-      <div class="spec-block">
-        <p class="spec-label">Typography</p>
-        <strong>System-first</strong>
-        <span>High-contrast size shifts, tight tracking, and clean uppercase metadata.</span>
-      </div>
-      <div class="spec-block">
-        <p class="spec-label">Surfaces</p>
-        <strong>Reduced geometry</strong>
-        <span>Thin borders, shallow radii, minimal shadow, precise spacing.</span>
-      </div>
-      <div class="spec-block">
-        <p class="spec-label">Delivery</p>
-        <strong>Static reliability</strong>
-        <span>Direct-open HTML files, GitHub Pages compatibility, explicit cache-busting.</span>
+    <section class="token-section">
+      <h2>Surfaces</h2>
+      <div class="surface-grid">
+        <div class="surface-card" style="background: var(--theme-surface-strong)">
+          <span>--theme-surface-strong</span>
+        </div>
+        <div class="surface-card" style="background: var(--theme-surface)">
+          <span>--theme-surface</span>
+        </div>
+        <div class="surface-card" style="background: var(--theme-surface-muted)">
+          <span>--theme-surface-muted</span>
+        </div>
+        <div class="surface-card" style="background: var(--theme-surface-overlay)">
+          <span>--theme-surface-overlay</span>
+        </div>
       </div>
     </section>
 
-    <section class="guidance-table">
-      <div class="table-head">
-        <span>Area</span>
-        <span>Recommended</span>
-        <span>Avoid</span>
-      </div>
-      <div class="table-row">
-        <span>Color</span>
-        <span>One accent family with neutral surfaces</span>
-        <span>Multiple bright highlight colors in one component</span>
-      </div>
-      <div class="table-row">
-        <span>Copy</span>
-        <span>Short nouns, direct descriptions, measurable labels</span>
-        <span>Marketing phrases or ambiguous placeholders</span>
-      </div>
-      <div class="table-row">
-        <span>Structure</span>
-        <span>Landmarks, summaries, predictable hierarchy</span>
-        <span>Decorative wrappers with no semantic role</span>
-      </div>
-      <div class="table-row">
-        <span>Change Control</span>
-        <span>Shared token updates plus QA and version alignment</span>
-        <span>One-off visual tweaks without deployment validation</span>
+    <section class="token-section">
+      <h2>Typography</h2>
+      <div class="type-specimens">
+        <div class="type-row">
+          <span class="type-label">Display</span>
+          <span class="type-sample type-display">Quarterly Revenue</span>
+        </div>
+        <div class="type-row">
+          <span class="type-label">Heading</span>
+          <span class="type-sample type-heading">Operating performance</span>
+        </div>
+        <div class="type-row">
+          <span class="type-label">Body</span>
+          <span class="type-sample type-body">Enterprise renewals and mix quality improved overall performance this quarter.</span>
+        </div>
+        <div class="type-row">
+          <span class="type-label">Caption</span>
+          <span class="type-sample type-caption">Revenue distribution by segment</span>
+        </div>
+        <div class="type-row">
+          <span class="type-label">Eyebrow</span>
+          <span class="type-sample type-eyebrow">Executive Summary</span>
+        </div>
       </div>
     </section>
 
-    <section class="guide-grid secondary-grid">
-      <article class="guide-card">
-        <p class="card-label">05 Usage</p>
-        <h2>Pair components according to business narrative.</h2>
-        <ul>
-          <li>Use `stat_card` with `sparkline_card` for KPI plus movement.</li>
-          <li>Use `bar_chart` with `bullet_chart` for mix plus target attainment.</li>
-          <li>Use `progress_bar` with `timeline_steps` for status plus phase context.</li>
-        </ul>
-      </article>
-      <article class="guide-card">
-        <p class="card-label">06 Contribution</p>
-        <h2>System changes require documentation, not only code.</h2>
-        <ul>
-          <li>Update gallery, docs, and guide pages together.</li>
-          <li>Preserve direct-open previews and accessible summaries.</li>
-          <li>Use the manual QA checklist before trusting a release.</li>
-        </ul>
-      </article>
+    <section class="token-section">
+      <h2>Radius</h2>
+      <div class="radius-grid">
+        <div class="radius-card" style="border-radius: var(--theme-radius-sm)">
+          <span>sm — 14px</span>
+        </div>
+        <div class="radius-card" style="border-radius: var(--theme-radius-md)">
+          <span>md — 22px</span>
+        </div>
+        <div class="radius-card" style="border-radius: var(--theme-radius-lg)">
+          <span>lg — 30px</span>
+        </div>
+        <div class="radius-card" style="border-radius: var(--theme-radius-pill)">
+          <span>pill</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="token-section">
+      <h2>Shadow</h2>
+      <div class="shadow-grid">
+        <div class="shadow-card" style="box-shadow: var(--theme-shadow-xs)">
+          <span>xs</span>
+        </div>
+        <div class="shadow-card" style="box-shadow: var(--theme-shadow-sm)">
+          <span>sm</span>
+        </div>
+        <div class="shadow-card" style="box-shadow: var(--theme-shadow-md)">
+          <span>md</span>
+        </div>
+        <div class="shadow-card" style="box-shadow: var(--theme-shadow-lg)">
+          <span>lg</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="token-section">
+      <h2>Spacing scale</h2>
+      <div class="spacing-list">
+        <div class="spacing-row"><span class="spacing-bar" style="width: var(--theme-space-1)"></span><span>space-1 — 0.5rem</span></div>
+        <div class="spacing-row"><span class="spacing-bar" style="width: var(--theme-space-2)"></span><span>space-2 — 0.75rem</span></div>
+        <div class="spacing-row"><span class="spacing-bar" style="width: var(--theme-space-3)"></span><span>space-3 — 1rem</span></div>
+        <div class="spacing-row"><span class="spacing-bar" style="width: var(--theme-space-4)"></span><span>space-4 — 1.5rem</span></div>
+        <div class="spacing-row"><span class="spacing-bar" style="width: var(--theme-space-5)"></span><span>space-5 — 2rem</span></div>
+        <div class="spacing-row"><span class="spacing-bar" style="width: var(--theme-space-6)"></span><span>space-6 — 3rem</span></div>
+        <div class="spacing-row"><span class="spacing-bar" style="width: var(--theme-space-7)"></span><span>space-7 — 4rem</span></div>
+      </div>
+    </section>
+
+    <section class="token-section">
+      <h2>Principles</h2>
+      <div class="principles-grid">
+        <div>
+          <strong>Reduce</strong>
+          <span>Typography and spacing over decoration. Small number of surfaces and emphasis states.</span>
+        </div>
+        <div>
+          <strong>Signal, not atmosphere</strong>
+          <span>The accent color marks deliberate emphasis. It doesn't fill backgrounds.</span>
+        </div>
+        <div>
+          <strong>Static reliability</strong>
+          <span>Every page opens directly in a browser. No build step, no framework.</span>
+        </div>
+        <div>
+          <strong>Accessible by default</strong>
+          <span>Screen-reader summaries on data components. Visible focus states. Reduced-motion support.</span>
+        </div>
+      </div>
     </section>
   </main>
   <script src="theme.js?v=20260323f"></script>

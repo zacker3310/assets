@@ -2,84 +2,43 @@
 
 ## Project Summary
 
-This repository is a small static asset library made of standalone HTML and CSS components. It is designed for direct browser use, embedding into other pages, and print/PDF-oriented layouts where predictable sizing matters.
+A static HTML/CSS component library for reporting dashboards, investor updates, and operational reviews. No dependencies, print-aware sizing, light/dark theme. Opens directly in any browser. Hosted on GitHub Pages.
 
 ## Key Files
 
-- `index.html`: main gallery page and public landing page
-- `index.css`: gallery-only styling
-- `theme.css`: shared theme tokens, light/dark mode styling, and toggle UI
-- `theme.js`: shared theme behavior and persistence
-- `brand_guide.html`: browsable brand and component guide
-- `brand_guide.css`: styling for the guide page
-- `compositions.html`: gallery of approved multi-component layouts
-- `compositions.css`: styles for composition index page
-- `executive_dashboard.html`: flagship composed example page
-- `executive_dashboard.css`: styles for flagship dashboard composition
-- `investor_update.html`: investor-facing summary composition
-- `investor_update.css`: styles for investor summary composition
-- `operating_review.html`: internal operating review composition
-- `operating_review.css`: styles for internal operating review composition
-- `CASE_STUDY.md`: portfolio-facing explanation of system decisions
-- `BRAND_GUIDE.md`: written brand-system principles
-- `CONTRIBUTING.md`: rules for adding and updating components
-- `GOVERNANCE.md`: brand-system decision and approval model
-- `TOKENS.md`: shared token guidance
-- `USAGE.md`: recommended business contexts and component pairings
-- `VERSIONING.md`: cache-busting convention for deployed static assets
-- `QA.md`: manual visual regression checklist
+- `index.html`: homepage with component gallery and composition links
+- `index.css`: homepage styles
+- `theme.css`: shared design tokens, light/dark mode, site shell, theme toggle
+- `theme.js`: theme persistence and system preference detection
+- `brand_guide.html` / `brand_guide.css`: visual token reference
+- `case_study.html` / `case_study.css`: portfolio case study
 
 ## Components
 
-### `bar_chart/`
+| Component | Directory | Files |
+|-----------|-----------|-------|
+| Bar Chart | `bar_chart/` | `bar_chart_chart.html`, `bar_chart_chart.css` |
+| Donut Chart | `pie_chart/` | `pie_chart_chart.html`, `pie_chart_chart.css` |
+| Progress Bar | `progress_bar/` | `progress_bar.html`, `progress_bar.css` |
+| Stat Card | `stat_card/` | `stat_card.html`, `stat_card.css` |
+| Sparkline Card | `sparkline_card/` | `sparkline_card.html`, `sparkline_card.css` |
+| Bullet Chart | `bullet_chart/` | `bullet_chart.html`, `bullet_chart.css` |
+| Timeline Steps | `timeline_steps/` | `timeline_steps.html`, `timeline_steps.css` |
+| Leaderboard Card | `leaderboard_card/` | `leaderboard_card.html`, `leaderboard_card.css` |
 
-- Files: `bar_chart_chart.html`, `bar_chart_chart.css`
-- Purpose: labeled horizontal comparison chart
+## Compositions
 
-### `pie_chart/`
-
-- Files: `pie_chart_chart.html`, `pie_chart_chart.css`
-- Purpose: donut chart with center metric and legend
-
-### `progress_bar/`
-
-- Files: `progress_bar.html`, `progress_bar.css`
-- Purpose: compact progress/status card
-
-### `stat_card/`
-
-- Files: `stat_card.html`, `stat_card.css`
-- Purpose: executive KPI card
-
-### `sparkline_card/`
-
-- Files: `sparkline_card.html`, `sparkline_card.css`
-- Purpose: mini trend card with spark bars
-
-### `bullet_chart/`
-
-- Files: `bullet_chart.html`, `bullet_chart.css`
-- Purpose: actual-versus-target bullet chart
-
-### `timeline_steps/`
-
-- Files: `timeline_steps.html`, `timeline_steps.css`
-- Purpose: horizontal milestone timeline
-
-### `leaderboard_card/`
-
-- Files: `leaderboard_card.html`, `leaderboard_card.css`
-- Purpose: ranked performance card
+- `executive_dashboard.html` / `.css` — Leadership KPI snapshot
+- `investor_update.html` / `.css` — Quarterly summary sheet
+- `operating_review.html` / `.css` — Internal review layout
 
 ## Assistant Guidance
 
 - Keep the project dependency-free unless the user explicitly wants to change that.
 - Preserve direct-open browser previews for every component.
 - Treat `theme.css` and `theme.js` as shared infrastructure used by every page.
-- Treat `brand_guide.html` and `BRAND_GUIDE.md` as part of the product, not optional docs.
-- Treat `VERSIONING.md` as the source of truth for cache-busting updates.
 - If a theme-related change affects all assets, update both the gallery and component pages together.
-- If you add or rename assets, update `index.html`, `README.md`, `CODEX.md`, `AGENTS.md`, and this file.
+- If you add or rename assets, update `index.html`, `README.md`, and this file.
 
 ## Design Rules
 
@@ -87,9 +46,18 @@ This repository is a small static asset library made of standalone HTML and CSS 
 - Use CSS custom properties where reuse or theming is likely.
 - Prefer inches for print-oriented component sizing.
 - Keep markup legible enough to copy into other templates without extra cleanup.
+- Use the accent color as a signal, not background atmosphere.
 
-## Publishing Rules
+## Nav Structure
+
+All pages share a 3-link nav: Home, Brand guide, Case study. The homepage links to compositions inline.
+
+## Versioning
+
+Cache-busting query strings on all CSS/JS: `?v=YYYYMMDD[a-z]`. Bump across all HTML files in the same pass.
+
+## Publishing
 
 - GitHub Pages is the public host.
+- `.nojekyll` is present.
 - Avoid machine-specific paths in docs.
-- Be mindful of asset caching when changing shared static files.

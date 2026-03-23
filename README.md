@@ -1,123 +1,85 @@
 # assets
 
-A portfolio-grade static component system for enterprise reporting, investor communication, and lightweight product surfaces. The repository is intentionally static-first: every page opens directly in the browser, uses print-aware sizing where it matters, and avoids build tools or external dependencies.
+A static HTML/CSS component library for reporting dashboards, investor updates, and operational reviews. No dependencies, print-aware sizing, light/dark theme. Opens directly in any browser.
 
-## Preview
+## Live site
 
-- Public gallery: [https://zacker3310.github.io/assets/](https://zacker3310.github.io/assets/)
-- Brand guide: open `brand_guide.html`
-- Composition gallery: open `compositions.html`
-- Flagship compositions: open `executive_dashboard.html`, `investor_update.html`, and `operating_review.html`
-- Portfolio case study: open `CASE_STUDY.md`
-- Local preview: open `index.html` or any component HTML file directly in a browser
+[zacker3310.github.io/assets](https://zacker3310.github.io/assets/)
 
-## Repository Position
+## Components
 
-This repo is meant to read as more than an asset dump. It combines:
+| # | Component | Directory | Purpose |
+|---|-----------|-----------|---------|
+| 01 | Bar Chart | `bar_chart/` | Horizontal comparison with labeled values |
+| 02 | Donut Chart | `pie_chart/` | Circular summary with center metric and legend |
+| 03 | Progress Bar | `progress_bar/` | Compact status card with progress track |
+| 04 | Stat Card | `stat_card/` | Single KPI with label and context line |
+| 05 | Sparkline Card | `sparkline_card/` | Mini trend bars with headline number |
+| 06 | Bullet Chart | `bullet_chart/` | Actual vs. target with qualitative ranges |
+| 07 | Timeline Steps | `timeline_steps/` | Horizontal phase tracker with status dots |
+| 08 | Leaderboard Card | `leaderboard_card/` | Ranked list with scores |
 
-- a core library of standalone HTML/CSS components
-- a shared theme and token layer with persistent light/dark mode
-- stakeholder-facing guide pages for brand and composition usage
-- operational docs for contribution, QA, governance, and static deployment
-- portfolio-ready example compositions that show the system working in realistic business contexts
+## Compositions
 
-## What’s Included
+Three example layouts that assemble the components into realistic reporting surfaces:
 
-| Component | Directory | Notes |
-|-----------|-----------|-------|
-| Bar Chart | `bar_chart/` | Horizontal comparison chart with labels, values, and themed bars |
-| Pie Chart | `pie_chart/` | Donut-style chart with a center metric and legend |
-| Progress Bar | `progress_bar/` | Compact status card with progress messaging |
-| Stat Card | `stat_card/` | KPI card for summary pages and executive snapshots |
-| Sparkline Card | `sparkline_card/` | Mini trend card with a simple bar sparkline |
-| Bullet Chart | `bullet_chart/` | Actual-versus-target bar with qualitative ranges |
-| Timeline Steps | `timeline_steps/` | Horizontal phase tracker for projects and launches |
-| Leaderboard Card | `leaderboard_card/` | Ranked list card for people, teams, or campaigns |
+- `executive_dashboard.html` — Leadership KPI snapshot
+- `investor_update.html` — Quarterly summary sheet
+- `operating_review.html` — Internal review with delivery, activity, and ranking
 
-## Composition Pages
+## Theme system
 
-| Page | File | Purpose |
-|------|------|---------|
-| Composition Gallery | `compositions.html` | Overview of approved multi-component layouts |
-| Executive Dashboard | `executive_dashboard.html` | Leadership-facing operating snapshot |
-| Investor Update | `investor_update.html` | Board- and investor-facing summary sheet |
-| Operating Review | `operating_review.html` | Dense internal operating cadence layout |
-| Brand Guide | `brand_guide.html` | Browsable system-level guide for brand and governance |
+- `theme.css` — Shared design tokens (40+ CSS custom properties): color, typography, spacing, radius, shadow, motion. Full light and dark mode.
+- `theme.js` — Applies theme from localStorage or system preference. Syncs the toggle button.
+- Every page includes the same theme toggle in the site header.
 
-## Shared Theme System
+## Structure
 
-- `theme.css` contains the shared design-system contract: light/dark variables, typography families, radius/shadow scales, site shell/header styles, specimen-stage styles, and the theme toggle.
-- `theme.js` applies the selected theme, respects system preference by default, and persists user choice in `localStorage`.
-- Every HTML page includes the same theme toggle, now integrated into the shared site/specimen shell.
-- Shared surface, border, text, and accent tokens also live in `theme.css` so component CSS can align around one visual system.
-- New semantic tokens such as muted surfaces, soft accent fills, and neutral structural values support more consistent composition pages.
-- The redesign uses a unified sans-serif type system across showcase pages, documentation, and component interiors.
-
-## Repo Layout
-
-```text
+```
 assets/
-├── .gitignore
-├── .nojekyll
-├── AGENTS.md
-├── BRAND_GUIDE.md
-├── CLAUDE.md
-├── CODEX.md
-├── CONTRIBUTING.md
-├── GOVERNANCE.md
-├── QA.md
-├── README.md
-├── TOKENS.md
-├── USAGE.md
-├── VERSIONING.md
-├── brand_guide.css
-├── brand_guide.html
-├── CASE_STUDY.md
-├── compositions.css
-├── compositions.html
-├── executive_dashboard.css
+├── index.html              Gallery and homepage
+├── brand_guide.html        Visual brand guide
+├── case_study.html         Portfolio case study
 ├── executive_dashboard.html
-├── investor_update.css
 ├── investor_update.html
-├── index.css
-├── index.html
-├── operating_review.css
 ├── operating_review.html
-├── theme.css
-├── theme.js
-├── bullet_chart/
+├── theme.css               Shared tokens and shell styles
+├── theme.js                Theme persistence
+├── index.css               Homepage styles
+├── brand_guide.css
+├── case_study.css
+├── compositions.css
+├── executive_dashboard.css
+├── investor_update.css
+├── operating_review.css
 ├── bar_chart/
-├── leaderboard_card/
 ├── pie_chart/
 ├── progress_bar/
-├── sparkline_card/
 ├── stat_card/
-└── timeline_steps/
+├── sparkline_card/
+├── bullet_chart/
+├── timeline_steps/
+└── leaderboard_card/
 ```
 
 ## Conventions
 
-- Components are self-contained and should remain directly openable.
-- Keep dependencies at zero unless a future change explicitly requires otherwise.
-- Prefer CSS custom properties for colors, spacing, sizing, and theming hooks.
-- Use inches (`in`) for print-sensitive component dimensions.
-- New assets or pages should be added to `index.html`, this README, `CLAUDE.md`, `CODEX.md`, and `AGENTS.md` when relevant guidance changes.
-- Keep the cache-busting token aligned across all HTML entrypoints. See `VERSIONING.md`.
-- Treat `BRAND_GUIDE.md` and `brand_guide.html` as the system-level source for brand behavior and presentation intent.
-- Use `CONTRIBUTING.md`, `GOVERNANCE.md`, and `USAGE.md` to keep the repo operationally useful for a larger organization.
-- Use the composition pages as portfolio-level examples of how the system is meant to be assembled.
-- Use `CASE_STUDY.md` to explain the system thinking and project framing in portfolio contexts.
+- Zero dependencies. No build step.
+- Components are self-contained and directly openable in a browser.
+- CSS custom properties for all theming. Use `theme.css` tokens before introducing local values.
+- Print-sensitive components use inches (`in`) for sizing.
+- Components include `sr-only` summaries for screen readers.
 
-## Working Locally
+## Versioning
 
-1. Open `index.html` to browse the component gallery.
-2. Open `compositions.html` and `brand_guide.html` to review the system layer.
-3. Open a component HTML file to inspect it in its specimen shell.
-4. Edit the page- or component-local CSS first, then update `theme.css` only if the change should apply across the whole library.
+Cache-busting query strings on all CSS/JS references: `?v=YYYYMMDD[a-z]`. Bump across all HTML files at the same time when deploying changes.
 
-## Publishing Notes
+## Working locally
 
-- GitHub Pages serves the repo as a static site.
-- `.nojekyll` is present so root-level static assets are served predictably.
-- Shared and page-local asset links use version query strings to reduce stale-cache issues after deploys.
-- Use `QA.md` as the manual post-change visual regression checklist.
+1. Open `index.html` to browse the gallery.
+2. Open any component HTML file to see it standalone.
+3. Edit component CSS first; only update `theme.css` if the change should apply system-wide.
+
+## Publishing
+
+GitHub Pages serves the repo as a static site. `.nojekyll` is present.

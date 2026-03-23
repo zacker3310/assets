@@ -2,33 +2,25 @@
 
 ## Overview
 
-This repository contains static, self-contained HTML/CSS assets intended for browser preview, GitHub Pages hosting, and reuse in report-like layouts.
+Static, self-contained HTML/CSS component library for reporting. Browser preview, GitHub Pages hosting, no build step.
 
-## Shared Constraints
+## Constraints
 
-- No build system is required.
-- No external runtime dependencies should be introduced by default.
-- Every component page should stay directly openable in a browser.
-- Shared light/dark mode behavior lives in `theme.css` and `theme.js`.
-- Cache-busting rules live in `VERSIONING.md`.
-- Manual regression guidance lives in `QA.md`.
-- Brand-level guidance lives in `BRAND_GUIDE.md`, `TOKENS.md`, and `brand_guide.html`.
-- Contribution and governance guidance live in `CONTRIBUTING.md` and `GOVERNANCE.md`.
-- Business-context guidance lives in `USAGE.md`.
-- Composition-level showcase pages live in `compositions.html` and `executive_dashboard.html`.
+- No build system. No external dependencies.
+- Every component page must open directly in a browser.
+- Shared theme: `theme.css` and `theme.js`.
+- Cache-busting: `?v=YYYYMMDD[a-z]` on all CSS/JS references, bumped across all HTML files together.
 
 ## Change Checklist
 
-When making meaningful repo changes, check whether these need updates too:
+When making meaningful changes, check whether these need updates:
 
-- `index.html` for gallery links and discoverability
-- `README.md` for public-facing documentation
-- `CLAUDE.md` for Claude-specific context
-- `CODEX.md` for Codex-specific context
-- Shared theme files if a change should apply across the whole library
+- `index.html` for gallery links
+- `README.md` for public docs
+- `CLAUDE.md` for AI context
 
 ## Content Guidelines
 
-- Prefer portable documentation with no local machine paths.
-- Favor clear relative asset paths that work both locally and on GitHub Pages.
-- Keep components visually intentional and consistent with the existing library style.
+- No local machine paths in documentation.
+- Clear relative asset paths that work locally and on GitHub Pages.
+- Keep components consistent with existing library style.

@@ -1,45 +1,42 @@
 # assets
 
-A compact library of standalone HTML/CSS assets for reports, embeds, and lightweight dashboards. Every component is self-contained, uses inch-based sizing for predictable print output, and can be opened directly in a browser without a build step.
+A lightweight library of standalone HTML/CSS components for reports, embeds, and simple dashboard surfaces. The repo is intentionally static-first: each asset opens directly in the browser, uses print-friendly sizing where it matters, and avoids build tools or external dependencies.
 
-## What is here
+## Preview
 
-- `index.html` is a simple gallery page for browsing the asset library.
-- Each component lives in its own folder with a matching `.html` and `.css` file.
-- No JavaScript, package manager, external fonts, or CDN dependencies are required.
+- Public gallery: [https://zacker3310.github.io/assets/](https://zacker3310.github.io/assets/)
+- Local preview: open `index.html` or any component HTML file directly in a browser
 
-## Components
+## What’s Included
 
 | Component | Directory | Notes |
 |-----------|-----------|-------|
-| Bar Chart | `bar_chart/` | Horizontal comparison chart with labels, values, and color-coded bars |
-| Pie Chart | `pie_chart/` | Donut-style chart with center metric and legend |
+| Bar Chart | `bar_chart/` | Horizontal comparison chart with labels, values, and themed bars |
+| Pie Chart | `pie_chart/` | Donut-style chart with a center metric and legend |
 | Progress Bar | `progress_bar/` | Compact status card with progress messaging |
 | Stat Card | `stat_card/` | KPI card for summary pages and executive snapshots |
-| Sparkline Card | `sparkline_card/` | Mini trend card with bar sparkline and headline metric |
+| Sparkline Card | `sparkline_card/` | Mini trend card with a simple bar sparkline |
 
-## Quick Start
+## Shared Theme System
 
-1. Visit [https://zacker3310.github.io/assets/](https://zacker3310.github.io/assets/) to preview the library.
-2. Open any component HTML file directly for an isolated preview.
-3. Copy a component directory into your project and adjust its CSS custom properties, copy, or dimensions as needed.
+- `theme.css` contains shared light/dark-mode variables and the top-right rocker toggle styles.
+- `theme.js` applies the selected theme, respects system preference by default, and persists user choice in `localStorage`.
+- Every HTML page includes the same fixed toggle in the top-right corner.
 
-## Conventions
-
-- Dimensions use CSS inches (`in`) to preserve print-oriented sizing.
-- Components are static HTML/CSS by default.
-- Colors, panel sizing, and shadows are exposed through CSS custom properties where useful.
-- File naming follows `<component>/<component>_<variant>.html|css` for chart-style assets and `<component>/<component>.html|css` for card-style assets.
-
-## Repository Layout
+## Repo Layout
 
 ```text
 assets/
 ├── .gitignore
+├── .nojekyll
+├── AGENTS.md
 ├── CLAUDE.md
+├── CODEX.md
 ├── README.md
 ├── index.css
 ├── index.html
+├── theme.css
+├── theme.js
 ├── bar_chart/
 ├── pie_chart/
 ├── progress_bar/
@@ -47,9 +44,22 @@ assets/
 └── stat_card/
 ```
 
-## Extending The Library
+## Conventions
 
-1. Create a new component folder in `snake_case`.
-2. Keep the component self-contained with local HTML and CSS.
-3. Use inch-based sizing if the asset is intended for print or PDF workflows.
-4. Add the new asset to `index.html`, this README, and `CLAUDE.md`.
+- Components are self-contained and should remain directly openable.
+- Keep dependencies at zero unless a future change explicitly requires otherwise.
+- Prefer CSS custom properties for colors, spacing, sizing, and theming hooks.
+- Use inches (`in`) for print-sensitive component dimensions.
+- New assets should be added to `index.html`, this README, `CLAUDE.md`, `CODEX.md`, and `AGENTS.md` when relevant guidance changes.
+
+## Working Locally
+
+1. Open `index.html` to browse the component gallery.
+2. Open a component HTML file to inspect it in isolation.
+3. Edit the component-local CSS first, then update `theme.css` only if the change should apply across the whole library.
+
+## Publishing Notes
+
+- GitHub Pages serves the repo as a static site.
+- `.nojekyll` is present so root-level static assets are served predictably.
+- Shared theme asset links use version query strings to reduce stale-cache issues after deploys.

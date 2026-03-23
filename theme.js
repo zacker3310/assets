@@ -2,14 +2,33 @@
   var STORAGE_KEY = "assets-theme";
   var root = document.documentElement;
   var toggle = document.querySelector("[data-theme-toggle]");
+  var mediaQuery = typeof window.matchMedia === "function"
+    ? window.matchMedia("(prefers-color-scheme: dark)")
+    : null;
+
+  function readStoredTheme() {
+    try {
+      return localStorage.getItem(STORAGE_KEY);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function writeStoredTheme(theme) {
+    try {
+      localStorage.setItem(STORAGE_KEY, theme);
+    } catch (error) {
+      return;
+    }
+  }
 
   function getPreferredTheme() {
-    var savedTheme = localStorage.getItem(STORAGE_KEY);
+    var savedTheme = readStoredTheme();
     if (savedTheme === "light" || savedTheme === "dark") {
       return savedTheme;
     }
 
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    return mediaQuery && mediaQuery.matches ? "dark" : "light";
   }
 
   function applyTheme(theme) {
@@ -36,7 +55,7 @@
 
   toggle.addEventListener("click", function () {
     var nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
-    localStorage.setItem(STORAGE_KEY, nextTheme);
+    writeStoredTheme(nextTheme);
     applyTheme(nextTheme);
   });
 })();

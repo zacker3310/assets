@@ -51,7 +51,7 @@ This repo is meant to read as more than an asset dump. It combines:
 - Every HTML page includes the same theme toggle, now integrated into the shared site/specimen shell.
 - Shared surface, border, text, and accent tokens also live in `theme.css` so component CSS can align around one visual system.
 - New semantic tokens such as muted surfaces, soft accent fills, and neutral structural values support more consistent composition pages.
-- The redesign also introduces a serif display layer for major showcase headings while keeping UI and component interiors on the sans-serif system stack.
+- The redesign uses a unified sans-serif type system across showcase pages, documentation, and component interiors.
 
 ## Repo Layout
 

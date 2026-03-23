@@ -39,7 +39,7 @@ The system should feel credible in three ways at once:
 ## Approved Expressions
 
 - restrained monochrome surfaces with red used as a signal
-- typography-led hierarchy with serif display moments and sans-serif interface language
+- typography-led hierarchy built on a restrained all-sans system
 - calm spacing and low-radius geometry
 - premium site chrome with slim navigation, quiet motion, and stronger section framing
 - specimen-style standalone component pages that feel curated, not discarded previews

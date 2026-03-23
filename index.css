@@ -20,7 +20,7 @@
 .hero-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
-  gap: 2rem;
+  gap: 2.25rem;
   align-items: end;
 }
 
@@ -36,8 +36,8 @@
   margin: 0;
   font-family: var(--theme-font-display);
   font-weight: 600;
-  line-height: 0.9;
-  letter-spacing: -0.07em;
+  line-height: 0.94;
+  letter-spacing: -0.045em;
   color: var(--theme-text);
 }
 
@@ -136,14 +136,14 @@
 
 .hero-rail {
   display: grid;
-  gap: 1rem;
+  gap: 1.1rem;
 }
 
 .hero-preview {
   display: grid;
   align-content: start;
-  gap: 0.8rem;
-  padding: 1.4rem;
+  gap: 0.75rem;
+  padding: var(--theme-card-pad);
   border: 1px solid var(--theme-border-strong);
   border-radius: var(--theme-radius-lg);
   background: linear-gradient(180deg, var(--theme-surface-strong) 0%, var(--theme-surface) 100%);
@@ -153,8 +153,8 @@
 .hero-preview strong {
   max-width: 16rem;
   font-size: 1.45rem;
-  line-height: 1.05;
-  letter-spacing: -0.05em;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
   color: var(--theme-text);
 }
 
@@ -162,10 +162,24 @@
   min-height: 15rem;
 }
 
+.hero-rail-grid .hero-preview {
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.hero-rail-grid .hero-preview strong {
+  font-size: 1.2rem;
+  line-height: 1.14;
+}
+
 .hero-rail-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.35rem;
 }
 
 .hero-diagram {
@@ -208,22 +222,22 @@
 .proof-band {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.35rem;
   margin-bottom: 3.2rem;
 }
 
 .proof-card,
 .deliverables-grid article,
 .system-list div {
-  min-height: 11.5rem;
-  padding: 1.4rem;
+  min-height: auto;
+  padding: 0;
   display: grid;
   align-content: start;
-  gap: 0.7rem;
-  border: 1px solid var(--theme-border-strong);
-  border-radius: var(--theme-radius-lg);
-  background: linear-gradient(180deg, var(--theme-surface-overlay) 0%, var(--theme-surface) 100%);
-  box-shadow: var(--theme-shadow-xs);
+  gap: 0.75rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .proof-card strong,
@@ -235,9 +249,18 @@
 
 .proof-card strong {
   max-width: 14rem;
-  font-size: 1.6rem;
-  line-height: 1.02;
-  letter-spacing: -0.05em;
+  font-size: 1.45rem;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.deliverables-grid strong,
+.system-list strong {
+  display: block;
+  max-width: 16rem;
+  font-size: 1.32rem;
+  line-height: 1.14;
+  letter-spacing: -0.03em;
 }
 
 .proof-card span:last-child,
@@ -255,7 +278,7 @@
 .portfolio-band {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: 1.4rem;
+  gap: 1.8rem;
   margin-top: 3.4rem;
   padding-top: 2.1rem;
   border-top: 1px solid var(--theme-border);
@@ -273,13 +296,13 @@
 .system-list,
 .portfolio-links {
   display: grid;
-  gap: 1rem;
+  gap: 1.35rem;
 }
 
 .feature-band {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.1rem;
   margin-bottom: 3.2rem;
 }
 
@@ -287,8 +310,8 @@
   min-height: 20rem;
   display: grid;
   align-content: start;
-  gap: 0.7rem;
-  padding: 1.5rem;
+  gap: 0.8rem;
+  padding: var(--theme-card-pad-lg);
   border: 1px solid var(--theme-border-strong);
   border-radius: var(--theme-radius-lg);
   background: linear-gradient(180deg, var(--theme-surface-strong) 0%, var(--theme-surface) 100%);
@@ -300,8 +323,8 @@
 .feature-card strong {
   max-width: 13rem;
   font-size: 1.9rem;
-  line-height: 0.95;
-  letter-spacing: -0.06em;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
   color: var(--theme-text);
 }
 
@@ -371,7 +394,7 @@ html[data-theme="dark"] .feature-preview span {
 .library-band {
   display: grid;
   grid-template-columns: minmax(0, 0.44fr) minmax(0, 0.56fr);
-  gap: 1.4rem;
+  gap: 1.8rem;
   margin-top: 3.3rem;
   padding-top: 2.1rem;
   border-top: 1px solid var(--theme-border);
@@ -386,15 +409,15 @@ html[data-theme="dark"] .feature-preview span {
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.1rem;
 }
 
 .asset-card {
   min-height: 17rem;
   display: grid;
   align-content: start;
-  gap: 0.55rem;
-  padding: 1.35rem;
+  gap: 0.65rem;
+  padding: var(--theme-card-pad);
   border: 1px solid var(--theme-border);
   border-radius: var(--theme-radius-md);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.26), var(--theme-surface) 100%);
@@ -422,8 +445,8 @@ html[data-theme="dark"] .feature-preview span {
 .asset-card strong {
   max-width: 13rem;
   font-size: 1.5rem;
-  line-height: 1.03;
-  letter-spacing: -0.05em;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
   color: var(--theme-text);
 }
 
@@ -769,8 +792,8 @@ html[data-theme="dark"] .asset-rank-row em {
   min-height: 11rem;
   display: grid;
   align-content: start;
-  gap: 0.65rem;
-  padding: 1.2rem;
+  gap: 0.75rem;
+  padding: var(--theme-card-pad);
   border: 1px solid var(--theme-border-strong);
   border-radius: var(--theme-radius-md);
   background: linear-gradient(180deg, var(--theme-surface-overlay) 0%, var(--theme-surface) 100%);
@@ -793,8 +816,8 @@ html[data-theme="dark"] .asset-rank-row em {
 .portfolio-links strong {
   max-width: 13rem;
   font-size: 1.55rem;
-  line-height: 1.02;
-  letter-spacing: -0.05em;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
 }
 
 .portfolio-link-copy {

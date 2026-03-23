@@ -71,7 +71,7 @@ The shared token layer lives in `theme.css`.
 - Soft pills, hover states, and emphasis surfaces should usually derive from `--theme-accent-soft`.
 - Tracks, dividers, and quiet structural bars can derive from `--theme-neutral-muted`.
 - Strong visual marks that still need to feel on-brand can derive from `--theme-neutral-strong`.
-- Major public-facing headings should use `--theme-font-display`; UI, data labels, and components should use `--theme-font-ui`.
+- `--theme-font-display` now intentionally resolves to the same sans-serif family as `--theme-font-ui` so the site reads as one cleaner typographic system.
 
 ## Composition Guidance
 

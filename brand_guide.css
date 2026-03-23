@@ -11,7 +11,7 @@
 .guide-hero-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(18rem, 0.92fr);
-  gap: 1.2rem;
+  gap: 1.8rem;
   align-items: end;
 }
 
@@ -36,8 +36,8 @@
   max-width: 40rem;
   font-family: var(--theme-font-display);
   font-size: clamp(3rem, 7vw, 5.8rem);
-  line-height: 0.9;
-  letter-spacing: -0.075em;
+  line-height: 0.94;
+  letter-spacing: -0.045em;
   font-weight: 600;
 }
 
@@ -99,26 +99,26 @@
 .guide-summary,
 .guide-card,
 .spec-block {
-  border: 1px solid var(--theme-border-strong);
-  border-radius: var(--theme-radius-lg);
-  background: linear-gradient(180deg, var(--theme-surface-strong) 0%, var(--theme-surface) 100%);
-  box-shadow: var(--theme-shadow-xs);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .guide-summary {
-  min-height: 16rem;
-  padding: 1.45rem;
+  min-height: auto;
+  padding: 0;
   display: grid;
   align-content: start;
-  gap: 1rem;
+  gap: 0.9rem;
 }
 
 .guide-summary strong {
   max-width: 14rem;
   font-family: var(--theme-font-display);
-  font-size: 2rem;
-  line-height: 0.98;
-  letter-spacing: -0.06em;
+  font-size: 1.7rem;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
   color: var(--theme-text);
 }
 
@@ -147,20 +147,21 @@
 
 .guide-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
 }
 
 .guide-card,
 .spec-block {
-  min-height: 14rem;
-  padding: 1.45rem;
+  min-height: auto;
+  padding: 0;
 }
 
 .guide-card h2 {
   max-width: 16rem;
   font-family: var(--theme-font-display);
-  font-size: 2rem;
-  line-height: 0.96;
-  letter-spacing: -0.06em;
+  font-size: 1.7rem;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
   font-weight: 600;
 }
 
@@ -175,18 +176,20 @@
 .secondary-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 3rem;
+  gap: 1.4rem;
 }
 
 .spec-band {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top: 3rem;
+  gap: 1.35rem;
 }
 
 .spec-block strong {
   display: block;
-  font-size: 1.35rem;
-  line-height: 1.02;
-  letter-spacing: -0.04em;
+  font-size: 1.2rem;
+  line-height: 1.14;
+  letter-spacing: -0.03em;
   color: var(--theme-text);
 }
 

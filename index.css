@@ -34,7 +34,7 @@
 .system-copy h2,
 .portfolio-callout h2 {
   margin: 0;
-  font-family: var(--theme-font-display);
+  font-family: var(--theme-font-ui);
   font-weight: 600;
   line-height: 0.94;
   letter-spacing: -0.045em;

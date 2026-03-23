@@ -7,7 +7,6 @@ The shared token layer lives in `theme.css`.
 ## Core Tokens
 
 - `--theme-font-ui`
-- `--theme-font-display`
 - `--theme-page-bg`
 - `--theme-surface`
 - `--theme-surface-strong`
@@ -71,7 +70,8 @@ The shared token layer lives in `theme.css`.
 - Soft pills, hover states, and emphasis surfaces should usually derive from `--theme-accent-soft`.
 - Tracks, dividers, and quiet structural bars can derive from `--theme-neutral-muted`.
 - Strong visual marks that still need to feel on-brand can derive from `--theme-neutral-strong`.
-- `--theme-font-display` now intentionally resolves to the same sans-serif family as `--theme-font-ui` so the site reads as one cleaner typographic system.
+- `--theme-font-ui` should be used across headings, UI, data labels, and component interiors.
+- `--theme-font-display` remains as a compatibility alias to the same sans-serif stack, but it is no longer a distinct typography layer.
 
 ## Composition Guidance
 

@@ -21,7 +21,7 @@
 .hero h1,
 .matrix-copy h2 {
   margin: 0;
-  font-family: var(--theme-font-display);
+  font-family: var(--theme-font-ui);
   color: var(--theme-text);
 }
 

@@ -22,7 +22,7 @@
 .dashboard-hero h1,
 .dashboard-note h2 {
   margin: 0;
-  font-family: var(--theme-font-display);
+  font-family: var(--theme-font-ui);
   color: var(--theme-text);
 }
 

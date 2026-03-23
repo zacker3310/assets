@@ -1,7 +1,7 @@
 :root {
   color-scheme: light;
   --theme-font-ui: "SF Pro Text", "SF Pro Display", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  --theme-font-display: "SF Pro Text", "SF Pro Display", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --theme-font-display: var(--theme-font-ui);
   --theme-page-bg: linear-gradient(180deg, #fbf7f0 0%, #f3ede3 48%, #ebe2d4 100%);
   --theme-page-bg-fixed: fixed;
   --theme-page-glow:

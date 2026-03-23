@@ -10,16 +10,26 @@
   --card-bg: linear-gradient(145deg, #103c33 0%, #1f5a4f 55%, #184a73 100%);
 }
 
+html[data-theme="dark"] {
+  --card-shadow: 0 20px 38px rgba(0, 0, 0, 0.34);
+  --ink: #f4fbf7;
+  --muted: rgba(244, 251, 247, 0.72);
+  --accent: #ffc488;
+  --positive: #9be5b2;
+  --card-bg: linear-gradient(145deg, #0d2e27 0%, #15463b 52%, #133552 100%);
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  padding: 0.7in 0.24in 0.24in;
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: transparent;
+  background: var(--theme-page-bg);
   font-family: "Avenir Next", "Segoe UI", sans-serif;
 }
 

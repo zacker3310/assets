@@ -12,15 +12,26 @@
   --q4-color: #facc15;
 }
 
+html[data-theme="dark"] {
+  --panel-bg: rgba(12, 24, 21, 0.84);
+  --panel-shadow: 0 20px 42px rgba(0, 0, 0, 0.32);
+  --text-strong: #edf7f2;
+  --text-muted: #9fb9af;
+  --q1-color: #4fe18b;
+  --q2-color: #75b8ff;
+  --q3-color: #ff84c3;
+  --q4-color: #ffd65a;
+}
+
 /* Transparent background */
 body {
   margin: 0;
-  padding: 0;
-  background: transparent;
+  padding: 0.7in 0.24in 0.24in;
   min-height: 100vh;
   display: grid;
   place-items: center;
   font-family: "Avenir Next", "Segoe UI", sans-serif;
+  background: var(--theme-page-bg);
 }
 
 /* Chart layout area */

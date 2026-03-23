@@ -10,16 +10,27 @@
   --bar: linear-gradient(180deg, #e59b63 0%, #cb6231 100%);
 }
 
+html[data-theme="dark"] {
+  --bg: rgba(18, 27, 24, 0.88);
+  --ink: #edf6f0;
+  --muted: #a6b9b0;
+  --border: rgba(228, 211, 189, 0.16);
+  --accent: #f1a872;
+  --accent-soft: rgba(241, 168, 114, 0.14);
+  --bar: linear-gradient(180deg, #f1b17e 0%, #da7641 100%);
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  padding: 0.7in 0.24in 0.24in;
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: transparent;
+  background: var(--theme-page-bg);
   font-family: "Avenir Next", "Segoe UI", sans-serif;
 }
 

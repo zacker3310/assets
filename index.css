@@ -1,5 +1,4 @@
 :root {
-  color-scheme: light;
   --page-bg: linear-gradient(135deg, #f4efe6 0%, #e6f0ea 45%, #eef5ff 100%);
   --panel-bg: rgba(255, 255, 255, 0.8);
   --panel-border: rgba(34, 52, 45, 0.12);
@@ -10,6 +9,17 @@
   --shadow: 0 20px 55px rgba(22, 49, 39, 0.12);
 }
 
+html[data-theme="dark"] {
+  --page-bg: radial-gradient(circle at top, #193329 0%, #101d19 44%, #09100e 100%);
+  --panel-bg: rgba(14, 28, 24, 0.72);
+  --panel-border: rgba(198, 231, 220, 0.12);
+  --text-strong: #ecf7f2;
+  --text-muted: #a8beb5;
+  --accent: #6ac2ad;
+  --accent-warm: #efb37d;
+  --shadow: 0 26px 60px rgba(0, 0, 0, 0.28);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -17,6 +27,7 @@
 body {
   margin: 0;
   min-height: 100vh;
+  padding: 0 1rem 1rem;
   font-family: "Avenir Next", "Segoe UI", sans-serif;
   background: var(--page-bg);
   color: var(--text-strong);
@@ -80,6 +91,11 @@ body {
   transform: translateY(-0.04in);
   box-shadow: 0 24px 60px rgba(22, 49, 39, 0.16);
   border-color: rgba(15, 118, 110, 0.26);
+}
+
+html[data-theme="dark"] .asset-card:hover {
+  box-shadow: 0 26px 64px rgba(0, 0, 0, 0.32);
+  border-color: rgba(106, 194, 173, 0.34);
 }
 
 .asset-kicker {

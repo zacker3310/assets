@@ -1,0 +1,100 @@
+:root {
+  color-scheme: light;
+  --theme-page-bg: linear-gradient(135deg, #f4efe6 0%, #e6f0ea 45%, #eef5ff 100%);
+  --theme-page-bg-fixed: fixed;
+  --theme-toggle-bg: rgba(255, 255, 255, 0.82);
+  --theme-toggle-border: rgba(21, 49, 40, 0.14);
+  --theme-toggle-shadow: 0 14px 30px rgba(18, 43, 35, 0.12);
+  --theme-toggle-ink: #173229;
+  --theme-toggle-muted: #688076;
+  --theme-track-bg: linear-gradient(180deg, #d7ece4 0%, #b7dccd 100%);
+  --theme-knob-bg: linear-gradient(180deg, #ffffff 0%, #eef5f1 100%);
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --theme-page-bg: radial-gradient(circle at top, #173229 0%, #0e1c18 42%, #08110f 100%);
+  --theme-page-bg-fixed: fixed;
+  --theme-toggle-bg: rgba(14, 28, 24, 0.86);
+  --theme-toggle-border: rgba(192, 224, 214, 0.14);
+  --theme-toggle-shadow: 0 16px 34px rgba(0, 0, 0, 0.34);
+  --theme-toggle-ink: #ebf6f1;
+  --theme-toggle-muted: #9eb5ac;
+  --theme-track-bg: linear-gradient(180deg, #1c4a3d 0%, #102920 100%);
+  --theme-knob-bg: linear-gradient(180deg, #f3f8f5 0%, #d7e7df 100%);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--theme-page-bg);
+  background-attachment: var(--theme-page-bg-fixed);
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 0.18in;
+  right: 0.18in;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.08in;
+  padding: 0.08in 0.1in 0.08in 0.12in;
+  border: 1px solid var(--theme-toggle-border);
+  border-radius: 999px;
+  background: var(--theme-toggle-bg);
+  box-shadow: var(--theme-toggle-shadow);
+  color: var(--theme-toggle-ink);
+  font: inherit;
+  cursor: pointer;
+  backdrop-filter: blur(18px);
+}
+
+.theme-toggle-label {
+  font-size: 0.12in;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.theme-toggle-state {
+  font-size: 0.1in;
+  color: var(--theme-toggle-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.theme-toggle-switch {
+  position: relative;
+  width: 0.56in;
+  height: 0.28in;
+  border-radius: 999px;
+  background: var(--theme-track-bg);
+  flex: 0 0 auto;
+  transition: background 180ms ease;
+}
+
+.theme-toggle-switch::after {
+  content: "";
+  position: absolute;
+  top: 0.03in;
+  left: 0.03in;
+  width: 0.22in;
+  height: 0.22in;
+  border-radius: 50%;
+  background: var(--theme-knob-bg);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+  transition: transform 180ms ease;
+}
+
+html[data-theme="dark"] .theme-toggle-switch::after {
+  transform: translateX(0.28in);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid rgba(73, 168, 137, 0.8);
+  outline-offset: 3px;
+}

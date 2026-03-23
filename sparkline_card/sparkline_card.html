@@ -4,9 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sparkline Card</title>
+  <link rel="stylesheet" href="../theme.css" />
   <link rel="stylesheet" href="sparkline_card.css" />
 </head>
 <body>
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+    <span class="theme-toggle-label">Theme</span>
+    <span class="theme-toggle-state">Light</span>
+    <span class="theme-toggle-switch" aria-hidden="true"></span>
+  </button>
   <article class="spark-card">
     <div class="copy-row">
       <div>
@@ -26,5 +32,6 @@
     </div>
     <p class="caption">Engagement climbed steadily after the campaign refresh.</p>
   </article>
+  <script src="../theme.js"></script>
 </body>
 </html>
